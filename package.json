@@ -1,0 +1,47 @@
+{
+  "name": "redux-no-middleware-pattarn",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.18.0",
+    "react": "^16.3.0",
+    "react-dom": "^16.3.0",
+    "react-redux": "^5.0.7",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "react-router-redux": "^5.0.0-alpha.9",
+    "react-scripts": "1.1.1",
+    "react-spinners": "^0.2.6",
+    "redux": "^3.7.2",
+    "styled-components": "^3.2.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "test:coverage": "react-scripts test --env=jsdom --collectCoverage",
+    "eject": "react-scripts eject",
+    "flow": "flow",
+    "eslint": "eslint src/**/*.js",
+    "eslint:fix": "eslint --fix src/**/*.js",
+    "codecov": "codecov -t 7fb50837-0906-4eeb-a634-1cbd020ce87c"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,mjs}"
+    ]
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.2",
+    "codecov": "^3.0.0",
+    "eslint": "^4.19.0",
+    "eslint-config-react-app": "^2.1.0",
+    "eslint-plugin-flowtype": "^2.46.1",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-prettier": "^2.6.0",
+    "eslint-plugin-react": "^7.7.0",
+    "flow-bin": "^0.69.0",
+    "prettier": "^1.11.1"
+  }
+}
