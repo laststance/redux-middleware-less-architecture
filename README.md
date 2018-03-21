@@ -1,5 +1,7 @@
 # Redux No Middleware Pattarn
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/ryota-murakami/redux-no-middleware-pattarn.svg)](https://greenkeeper.io/)
+
 [![CircleCI](https://circleci.com/gh/ryota-murakami/redux-no-middleware-pattarn.svg?style=svg)](https://circleci.com/gh/ryota-murakami/redux-no-middleware-pattarn)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 [![tested with jest](https://img.shields.io/badge/tested_with-jest-99424f.svg)](https://github.com/facebook/jest)
