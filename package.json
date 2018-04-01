@@ -18,13 +18,11 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "test:coverage": "react-scripts test --env=jsdom --collectCoverage",
+    "test": "react-scripts test --env=jsdom --collectCoverage --verbose",
     "eject": "react-scripts eject",
     "flow": "flow",
-    "eslint": "eslint src/**/*.js",
-    "eslint:fix": "eslint --fix src/**/*.js",
-    "codecov": "codecov -t 7fb50837-0906-4eeb-a634-1cbd020ce87c"
+    "lint": "eslint src/**/*.js",
+    "lint:fix": "eslint --fix src/**/*.js",
     "codecov": "codecov -t $CODECOV_TOKEN"
   },
   "jest": {

@@ -36,6 +36,6 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       # run tests!
-      - run: yarn test:coverage
+      - run: yarn test
       - run: yarn codecov
-      - run: yarn eslint
+      - run: yarn lint
