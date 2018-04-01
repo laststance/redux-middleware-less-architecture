@@ -3,7 +3,6 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import { connect } from 'react-redux'
 import { actionType as type } from '../../types/ReduxAction'
-
 import type { ReduxState, RootReduxState } from '../../types/ReduxState'
 import type { Dispatch } from 'redux'
 import type { RepositoryList } from '../../types/APIDataModel'
