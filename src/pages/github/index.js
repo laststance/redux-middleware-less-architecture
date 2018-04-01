@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import axios from 'axios'
 import { connect } from 'react-redux'
 import { actionType as type } from '../../types/ReduxAction'
+import { Loading } from '../shered/elements'
 import type { ReduxState, RootReduxState } from '../../types/ReduxState'
 import type { Dispatch } from 'redux'
 import type { Repository, RepositoryList } from '../../types/APIDataModel'
@@ -24,6 +25,7 @@ const List = styled.div``
 const Item = styled.div``
 
 type StateProps = {
+  isLoading: boolean,
   repositoryList: RepositoryList
 }
 type DispatchProps = {
@@ -37,27 +39,30 @@ class Github extends Component<Props> {
   }
 
   render() {
-    const { repositoryList } = this.props
+    const { isLoading, repositoryList } = this.props
+    const repoList = this.getRepoList(repositoryList)
 
     return (
       <Container>
         <Header>Github Page</Header>
-        <List>
-          {repositoryList.length ? (
-            repositoryList.map((r: Repository) => (
-              <Item key={r.id}>
-                <p>{r.name}</p>
-                <p>{r.description}</p>
-                <p>{r.full_name}</p>
-                <p>{r.owner.login}</p>
-                <img src={r.owner.avatar_url} alt="avatar" />
-              </Item>
-            ))
-          ) : (
-            <p>no items.</p>
-          )}
-        </List>
+        <List>{isLoading ? <Loading /> : repoList}</List>
       </Container>
+    )
+  }
+
+  getRepoList(repositoryList: RepositoryList): React.Element<any> {
+    return repositoryList.length ? (
+      repositoryList.map((r: Repository) => (
+        <Item key={r.id}>
+          <p>{r.name}</p>
+          <p>{r.description}</p>
+          <p>{r.full_name}</p>
+          <p>{r.owner.login}</p>
+          <img src={r.owner.avatar_url} alt="avatar" />
+        </Item>
+      ))
+    ) : (
+      <p>no items.</p>
     )
   }
 }
@@ -65,6 +70,7 @@ class Github extends Component<Props> {
 const MapStateToProps = (state: RootReduxState) => {
   const app: ReduxState = state.app
   return {
+    isLoading: app.isLoading,
     repositoryList: app.repositoryList
   }
 }
