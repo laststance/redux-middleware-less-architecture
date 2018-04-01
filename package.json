@@ -25,6 +25,7 @@
     "eslint": "eslint src/**/*.js",
     "eslint:fix": "eslint --fix src/**/*.js",
     "codecov": "codecov -t 7fb50837-0906-4eeb-a634-1cbd020ce87c"
+    "codecov": "codecov -t $CODECOV_TOKEN"
   },
   "jest": {
     "collectCoverageFrom": [
