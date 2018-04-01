@@ -12,12 +12,10 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
 `
-
 const TopContainer = styled.div`
   height: 50%;
   ${flexRowCenter};
 `
-
 const BottomContainer = styled.div`
   height: 50%;
   ${flexRowCenter};
@@ -27,7 +25,7 @@ const index = () => {
   return (
     <Container>
       <TopContainer>
-        <p>Index Page</p>
+        <h1>Index Page</h1>
       </TopContainer>
       <BottomContainer>
         <Link to="/github">GitHub Page</Link>
