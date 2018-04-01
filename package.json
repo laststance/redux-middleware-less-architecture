@@ -27,7 +27,11 @@
   },
   "jest": {
     "collectCoverageFrom": [
-      "src/**/*.{js,jsx,mjs}"
+      "src/**/*.{js,jsx,mjs}",
+      "!src/types/**/*",
+      "!src/index.js",
+      "!src/Store.js",
+      "!src/const.js"
     ]
   },
   "devDependencies": {
