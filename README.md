@@ -14,7 +14,7 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 ## What's this?
-Redux No Middleware Pattarn is code examole repository.  
+Redux No Middleware Pattarn is code example repository.  
 it's a [create-react-app](https://github.com/facebook/create-react-app) based, please see [/src](https://github.com/ryota-murakami/redux-no-middleware-pattarn/tree/master/src) folder.  
 
 also you could see [LIVE DEMO](https://hardcore-leavitt-db43ed.netlify.com/)💻 with redux-devtools chrome extention on the page.
