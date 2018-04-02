@@ -21,7 +21,12 @@ const Container = styled.div`
 const Header = styled.h1`
   flex-basis: 1;
 `
-const List = styled.div``
+const List = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: center;
+`
 const Item = styled.div``
 
 type StateProps = {
@@ -81,7 +86,7 @@ const MapDispatchToProps = (dispatch: Dispatch<ReduxAction>) => {
       // Loading...
       dispatch({ type: type.START_ASYNC })
 
-      // Call API...
+      // Call API
       try {
         const query = 'react'
         const response = await axios.get(
