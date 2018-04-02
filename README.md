@@ -1,5 +1,4 @@
 # Redux No Middleware Pattarn
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/ryota-murakami/redux-no-middleware-pattarn.svg)](https://greenkeeper.io/)
 [![CircleCI](https://circleci.com/gh/ryota-murakami/redux-no-middleware-pattarn.svg?style=svg)](https://circleci.com/gh/ryota-murakami/redux-no-middleware-pattarn)
@@ -7,6 +6,7 @@
 [![tested with jest](https://img.shields.io/badge/tested_with-jest-99424f.svg)](https://github.com/facebook/jest)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 [![codecov](https://codecov.io/gh/ryota-murakami/redux-no-middleware-pattarn/branch/master/graph/badge.svg)](https://codecov.io/gh/ryota-murakami/redux-no-middleware-pattarn)
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
 
 > 🍷 write async logic without middleware in redux
 
@@ -14,10 +14,10 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 ## What's this?
-Redux No Middleware Pattarn is code examole repository.
+Redux No Middleware Pattarn is code examole repository.  
 it's a [create-react-app](https://github.com/facebook/create-react-app) based, please see [/src](https://github.com/ryota-murakami/redux-no-middleware-pattarn/tree/master/src) folder.  
-also you could see [LIVE DEMO](https://hardcore-leavitt-db43ed.netlify.com/)💻
-with redux-devtools chrome extention on the page.
+
+also you could see [LIVE DEMO](https://hardcore-leavitt-db43ed.netlify.com/)💻 with redux-devtools chrome extention on the page.
 
 ## Concept
 in 2018, Evolved JS syntax has capability of write as well smart async handling logic.  
