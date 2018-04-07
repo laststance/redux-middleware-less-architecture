@@ -30,8 +30,7 @@ const List = styled.div`
 const Item = styled.div`` // TODO style
 
 type StateProps = {
-  isLoading: boolean,
-  repositoryList: RepositoryList
+  app: ReduxState
 }
 type DispatchProps = {
   fetchRepository: ActionDispatcher
@@ -44,7 +43,7 @@ class Github extends Component<Props> {
   }
 
   render() {
-    const { isLoading, repositoryList } = this.props
+    const { isLoading, repositoryList } = this.props.app
     const repoList = this.getRepoList(repositoryList)
 
     return (
@@ -69,14 +68,6 @@ class Github extends Component<Props> {
     ) : (
       <p>no items.</p>
     )
-  }
-}
-
-const MapStateToProps = (state: RootReduxState) => {
-  const app: ReduxState = state.app
-  return {
-    isLoading: app.isLoading,
-    repositoryList: app.repositoryList
   }
 }
 
@@ -105,4 +96,6 @@ const MapDispatchToProps = (dispatch: Dispatch<ReduxAction>) => {
   }
 }
 
-export default connect(MapStateToProps, MapDispatchToProps)(Github)
+export default connect((state: RootReduxState) => state, MapDispatchToProps)(
+  Github
+)
