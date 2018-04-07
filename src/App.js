@@ -6,7 +6,7 @@ import createHistory from 'history/createBrowserHistory'
 import { Provider } from 'react-redux'
 import IndexPage from './pages/index'
 import GithubPage from './pages/github'
-import { store } from './Store'
+import { store } from './store'
 import './index.css'
 
 const history = createHistory()
