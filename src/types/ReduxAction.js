@@ -28,5 +28,3 @@ export type ReduxAction =
   | AsyncFetchRepositoryAction
 
 export type AsyncAction = AsyncFetchRepositoryAction
-
-export type ActionDispatcher = Function

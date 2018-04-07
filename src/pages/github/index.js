@@ -8,7 +8,7 @@ import { Loading } from '../shered/elements'
 import type { ReduxState, RootReduxState } from '../../types/ReduxState'
 import type { Dispatch } from 'redux'
 import type { Repository, RepositoryList } from '../../types/APIDataModel'
-import type { ActionDispatcher, ReduxAction } from '../../types/ReduxAction'
+import type { ReduxAction } from '../../types/ReduxAction'
 
 const Container = styled.div`
   width: 100%;
@@ -29,17 +29,34 @@ const List = styled.div`
 `
 const Item = styled.div`` // TODO style
 
-type StateProps = {
-  app: ReduxState
-}
-type DispatchProps = {
-  fetchRepository: ActionDispatcher
-}
-type Props = StateProps & DispatchProps
+type Props = { app: ReduxState, dispatch: Dispatch<ReduxAction> }
 
 class Github extends Component<Props> {
+  fetchRepository = async () => {
+    const dispatch = this.props.dispatch
+
+    // Loading...
+    dispatch({ type: type.START_ASYNC })
+
+    // Call API
+    try {
+      const query = 'react'
+      const response = await axios.get(
+        `https://api.github.com/search/repositories?q=${query}`
+      )
+      const repositoryList: RepositoryList = response.data.items
+
+      dispatch({
+        type: type.ASYNC_FETCH_REPOSITORY,
+        payload: { repositoryList: repositoryList }
+      })
+    } catch (e) {
+      console.error(e)
+    }
+  }
+
   componentDidMount() {
-    this.props.fetchRepository()
+    this.fetchRepository()
   }
 
   render() {
@@ -71,31 +88,4 @@ class Github extends Component<Props> {
   }
 }
 
-const MapDispatchToProps = (dispatch: Dispatch<ReduxAction>) => {
-  return {
-    fetchRepository: async () => {
-      // Loading...
-      dispatch({ type: type.START_ASYNC })
-
-      // Call API
-      try {
-        const query = 'react'
-        const response = await axios.get(
-          `https://api.github.com/search/repositories?q=${query}`
-        )
-        const repositoryList: RepositoryList = response.data.items
-
-        dispatch({
-          type: type.ASYNC_FETCH_REPOSITORY,
-          payload: { repositoryList: repositoryList }
-        })
-      } catch (e) {
-        console.error(e)
-      }
-    }
-  }
-}
-
-export default connect((state: RootReduxState) => state, MapDispatchToProps)(
-  Github
-)
+export default connect((state: RootReduxState) => state)(Github)
