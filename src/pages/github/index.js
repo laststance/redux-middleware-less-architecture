@@ -27,7 +27,7 @@ const List = styled.div`
   justify-content: flex-start;
   text-align: center;
 `
-const Item = styled.div``
+const Item = styled.div`` // TODO style
 
 type StateProps = {
   isLoading: boolean,
