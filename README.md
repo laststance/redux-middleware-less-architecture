@@ -27,30 +27,66 @@ follwing example are my preffer straightforward way.
 ## Example
 
 ```js
-const MapDispatchToProps = (dispatch: Dispatch<ReduxAction>) => {
-  return {
-    fetchRepository: async () => {
-      // Loading...
-      dispatch({ type: type.START_ASYNC })
+type Props = { app: ReduxState, dispatch: Dispatch<ReduxAction> }
 
-      // Call API
-      try {
-        const query = 'react'
-        const response = await axios.get(
-          `https://api.github.com/search/repositories?q=${query}`
-        )
-        const repositoryList: RepositoryList = response.data.items
+class Github extends Component<Props> {
+  fetchRepository = async () => {
+    const dispatch = this.props.dispatch
 
-        dispatch({
-          type: type.ASYNC_FETCH_REPOSITORY,
-          payload: { repositoryList: repositoryList }
-        })
-      } catch (e) {
-        console.error(e)
-      }
+    // Loading...
+    dispatch({ type: type.START_ASYNC })
+
+    // Call API
+    try {
+      const query = 'react'
+      const response = await axios.get(
+        `https://api.github.com/search/repositories?q=${query}`
+      )
+      const repositoryList: RepositoryList = response.data.items
+
+      dispatch({
+        type: type.ASYNC_FETCH_REPOSITORY,
+        payload: { repositoryList: repositoryList }
+      })
+    } catch (e) {
+      console.error(e)
     }
   }
 
+  componentDidMount() {
+    this.fetchRepository()
+  }
+
+  render() {
+    const { isLoading, repositoryList } = this.props.app
+    const repoList = this.getRepoList(repositoryList)
+
+    return (
+      <Container>
+        <Header>Github Page</Header>
+        <List>{isLoading ? <Loading /> : repoList}</List>
+      </Container>
+    )
+  }
+
+  getRepoList(repositoryList: RepositoryList): React.Element<any> {
+    return repositoryList.length ? (
+      repositoryList.map((r: Repository) => (
+        <Item key={r.id}>
+          <p>{r.name}</p>
+          <p>{r.description}</p>
+          <p>{r.full_name}</p>
+          <p>{r.owner.login}</p>
+          <img src={r.owner.avatar_url} alt="avatar" />
+        </Item>
+      ))
+    ) : (
+      <p>no items.</p>
+    )
+  }
+}
+
+export default connect((state: RootReduxState) => state)(Github)
 ```
 
 ## Inspiration
