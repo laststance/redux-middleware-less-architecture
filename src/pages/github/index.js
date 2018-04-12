@@ -5,6 +5,7 @@ import axios from 'axios'
 import { connect } from 'redux-vanilla'
 import { actionType as type } from '../../types/ReduxAction'
 import { Loading } from '../shered/elements'
+import List from './List'
 import type { ReduxState } from '../../types/ReduxState'
 import type { Dispatch } from 'redux'
 import type { Repository, RepositoryList } from '../../types/APIDataModel'
@@ -21,13 +22,8 @@ const Container = styled.div`
 const Header = styled.h1`
   flex-basis: 1;
 `
-const List = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  text-align: center;
-`
-const Item = styled.div`` // TODO style
+
+const Item = styled.div``
 
 type Props = { app: ReduxState, dispatch: Dispatch<ReduxAction> }
 
