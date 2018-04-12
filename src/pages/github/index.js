@@ -2,10 +2,10 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import axios from 'axios'
-import { connect } from 'react-redux'
+import { connect } from 'redux-vanilla'
 import { actionType as type } from '../../types/ReduxAction'
 import { Loading } from '../shered/elements'
-import type { ReduxState, RootReduxState } from '../../types/ReduxState'
+import type { ReduxState } from '../../types/ReduxState'
 import type { Dispatch } from 'redux'
 import type { Repository, RepositoryList } from '../../types/APIDataModel'
 import type { ReduxAction } from '../../types/ReduxAction'
@@ -60,7 +60,7 @@ class Github extends Component<Props> {
   }
 
   render() {
-    const { isLoading, repositoryList } = this.props.app
+    const { app: { isLoading, repositoryList } } = this.props.state
     const repoList = this.getRepoList(repositoryList)
 
     return (
@@ -88,4 +88,4 @@ class Github extends Component<Props> {
   }
 }
 
-export default connect((state: RootReduxState) => state)(Github)
+export default connect(Github)
