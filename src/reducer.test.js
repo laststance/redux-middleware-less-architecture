@@ -1,4 +1,4 @@
-// @flow
+// @noflow
 import { createStore } from 'redux'
 import appReducer from './reducer'
 import { emptyArray } from './types/ReduxState'

@@ -3,7 +3,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Loading } from '../../shered/elements'
 import Item from './Item'
-import type { RepositoryList } from '../../../types/APIDataModel'
+import type { Repository, RepositoryList } from '../../../types/APIDataModel'
 
 const Container = styled.div`
   display: flex;
@@ -24,7 +24,9 @@ const List = (props: Props) => {
   // TODO abstract isLoading
   return <Container>{isLoading ? <Loading /> : listItems}</Container>
 
-  function getRepoList(repositoryList: RepositoryList): React.Element<any> {
+  function getRepoList(
+    repositoryList: RepositoryList
+  ): React$Element<any> | React$Element<any>[] {
     return repositoryList.length ? (
       repositoryList.map((r: Repository) => <Item repository={r} />)
     ) : (

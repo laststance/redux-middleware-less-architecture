@@ -5,7 +5,7 @@ import axios from 'axios'
 import { connect } from 'redux-vanilla'
 import { actionType as type } from '../../types/ReduxAction'
 import List from './List'
-import type { ReduxState } from '../../types/ReduxState'
+import type { RootReduxState } from '../../types/ReduxState'
 import type { Dispatch } from 'redux'
 import type { RepositoryList } from '../../types/APIDataModel'
 import type { ReduxAction } from '../../types/ReduxAction'
@@ -22,7 +22,7 @@ const Header = styled.h1`
   flex-basis: 1;
 `
 
-type Props = {| app: ReduxState, dispatch: Dispatch<ReduxAction> |}
+type Props = {| state: RootReduxState, dispatch: Dispatch<ReduxAction> |}
 
 class Github extends Component<Props> {
   fetchRepository = async () => {
