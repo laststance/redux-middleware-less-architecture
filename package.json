@@ -32,7 +32,7 @@
       "src/**/*.{js,jsx,mjs}",
       "!src/types/**/*",
       "!src/index.js",
-      "!src/Store.js",
+      "!src/store.js",
       "!src/const.js"
     ]
   },
