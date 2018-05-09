@@ -98,4 +98,4 @@ export type Repository = {
   score: number
 }
 
-export type RepositoryList = Array<Repository> | []
+export type RepositoryList = Array<Repository>
