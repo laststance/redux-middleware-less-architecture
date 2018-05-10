@@ -24,7 +24,7 @@ const Header = styled.h1`
 
 type Props = {| state: RootReduxState, dispatch: Dispatch<ReduxAction> |}
 
-class Github extends Component<Props> {
+export class Github extends Component<Props> {
   fetchRepository = async () => {
     const dispatch = this.props.dispatch
 
