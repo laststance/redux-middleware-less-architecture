@@ -5,7 +5,7 @@ import { render, Simulate, wait } from 'react-testing-library'
 import 'dom-testing-library/extend-expect'
 import axios from 'axios'
 import { Github } from './index'
-import mockResponse from './mockResponse'
+import mockResponse from '../../testutil/mockResponse'
 import { store } from '../../store'
 jest.mock('axios')
 test('foo', async () => {
