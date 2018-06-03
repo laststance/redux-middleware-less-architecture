@@ -7,14 +7,15 @@ import axios from 'axios'
 import { Github } from './index'
 import mockResponse from '../../testutil/mockResponse'
 import { store } from '../../store'
-jest.mock('axios')
+
 test('foo', async () => {
+  console.log(axios.get)
   expect(1).toBe(1)
-  // axios.get.mockResolvedValueOnce({ data: mockResponse })
-  //
-  // const { getByText, getByTestId, container } = render(
-  //   <Github state={store.getState()} dispatch={store.dispatch} />
-  // )
-  //
-  // console.log(getByText, getByTestId, container)
+  axios.get.mockResolvedValueOnce({ data: mockResponse })
+
+  const { getByText, getByTestId, container } = render(
+    <Github state={store.getState()} dispatch={store.dispatch} />
+  )
+
+  console.log(getByText, getByTestId, container)
 })

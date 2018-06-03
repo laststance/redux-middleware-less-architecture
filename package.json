@@ -18,7 +18,9 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom --collectCoverage --verbose",
+    "test": "react-scripts test --env=jsdom",
+    "test:watch": "react-scripts test --watch --env=jsdom",
+    "test:cov": "react-scripts test --env=jsdom --collectCoverage",
     "eject": "react-scripts eject",
     "flow": "flow",
     "lint": "eslint src/**/*.js",
