@@ -1,3 +1,3 @@
 module.exports = {
-  get: 'aaaaaaaaaaeeeeeeeeeeeedddddddddeeeee'
+  get: jest.fn(() => Promise.resolve({ data: {} }))
 }
