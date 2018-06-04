@@ -1,7 +1,7 @@
 // @flow
 import React from 'react'
 import styled from 'styled-components'
-import { Loading } from '../../shered/elements'
+import { Loading } from '../../shered/element'
 import Item from './Item'
 import type { Repository, RepositoryList } from '../../../types/APIDataModel'
 
