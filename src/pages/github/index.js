@@ -59,7 +59,7 @@ export class Github extends Component<Props> {
 
     return (
       <Container>
-        <Header>Github Page</Header>
+        <Header data-testid="github-header">Github Page</Header>
         <List isLoading={isLoading} repositoryList={repositoryList} />
       </Container>
     )
