@@ -14,7 +14,6 @@ test('fitst react-testing-liblary', async () => {
     })
   )
 
-  // TODO モックに設定したデータをGithubコンポーネントが受け取った時に期待される振る舞いをassertする
   const { getByTestId, debug } = render(
     <Github state={store.getState()} dispatch={store.dispatch} />
   )
