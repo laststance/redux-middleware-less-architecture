@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import axios from 'axios'
 import { connect } from 'redux-vanilla'
+import { Loading } from '../../element'
 import { actionType as type } from '../../types/ReduxAction'
 import List from './List'
 import type { RootReduxState } from '../../types/ReduxState'
@@ -60,7 +61,7 @@ export class Github extends Component<Props> {
     return (
       <Container>
         <Header data-testid="github-header">Github Page</Header>
-        <List isLoading={isLoading} repositoryList={repositoryList} />
+        {isLoading ? <Loading /> : <List data={repositoryList} />}
       </Container>
     )
   }

@@ -1,7 +1,6 @@
 // @flow
 import React from 'react'
 import styled from 'styled-components'
-import { Loading } from '../../../element'
 import Item from './Item'
 import type { Repository, RepositoryList } from '../../../types/APIDataModel'
 
@@ -13,26 +12,24 @@ const Container = styled.div`
 `
 
 type Props = {|
-  isLoading: boolean,
-  repositoryList: RepositoryList
+  data: RepositoryList
 |}
 
 const List = (props: Props) => {
-  const { isLoading, repositoryList } = props
-
-  const listItems = getRepoList(repositoryList)
-  // TODO abstract isLoading
-  return <Container>{isLoading ? <Loading /> : listItems}</Container>
-
-  function getRepoList(
-    repositoryList: RepositoryList
-  ): React$Element<any> | React$Element<any>[] {
-    return repositoryList.length ? (
-      repositoryList.map((r: Repository) => <Item repository={r} />)
-    ) : (
-      <p>no items.</p>
+  const { data } = props
+  if (data.length === 0) {
+    return (
+      <Container>
+        <p>no items.</p>
+      </Container>
     )
   }
+
+  return (
+    <Container>
+      {data.map((r: Repository, i) => <Item repository={r} />)}
+    </Container>
+  )
 }
 
 export default List
