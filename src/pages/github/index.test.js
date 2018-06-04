@@ -1,5 +1,5 @@
-import React from 'react'
-import { render } from 'react-testing-library'
+import React, { Component } from 'react'
+import { render, wait } from 'react-testing-library'
 import 'jest-dom/extend-expect'
 import axios from 'axios'
 import { Github } from './index'
@@ -14,15 +14,30 @@ test('fitst react-testing-liblary', async () => {
     })
   )
 
-  const { getByTestId, debug } = render(
-    <Github state={store.getState()} dispatch={store.dispatch} />
-  )
+  class DispatchEmitter extends Component {
+    state = { reduxState: store.getState() }
 
-  debug()
+    constructor(props) {
+      super(props)
+      store.subscribe(() => this.setState({ reduxState: store.getState() }))
+    }
+
+    render() {
+      return <Github state={this.state.reduxState} dispatch={store.dispatch} />
+    }
+  }
+
+  const { getByTestId, debug } = render(<DispatchEmitter />)
 
   expect(getByTestId('github-header')).toHaveTextContent('Github Page')
   expect(axios.get).toHaveBeenCalledTimes(1)
   expect(axios.get).toHaveBeenCalledWith(
     'https://api.github.com/search/repositories?q=react'
   )
+
+  debug()
+
+  await wait()
+
+  debug()
 })

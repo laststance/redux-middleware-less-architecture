@@ -5,15 +5,15 @@ import type { Repository } from '../../../types/APIDataModel'
 
 const Container = styled.div``
 
-type Props = {|
+type Props = {
   repository: Repository
-|}
+}
 
 const Item = (props: Props) => {
   const { repository } = props
 
   return (
-    <Container key={repository.id}>
+    <Container>
       <p>{repository.name}</p>
       <p>{repository.description}</p>
       <p>{repository.full_name}</p>

@@ -27,7 +27,7 @@ const List = (props: Props) => {
 
   return (
     <Container>
-      {data.map((r: Repository, i) => <Item repository={r} />)}
+      {data.map((r: Repository) => <Item repository={r} key={r.id} />)}
     </Container>
   )
 }
