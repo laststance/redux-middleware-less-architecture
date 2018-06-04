@@ -42,7 +42,7 @@ export class Github extends Component<Props> {
 
       dispatch({
         type: type.ASYNC_FETCH_REPOSITORY,
-        payload: { repositoryList: repositoryList }
+        payload: { repositoryList }
       })
     } catch (e) {
       console.error(e)
