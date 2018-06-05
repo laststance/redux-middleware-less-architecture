@@ -1,0 +1,619 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`github page fetch from API data shown when mounted 1`] = `
+<div
+  class="sc-htpNat evtBoq"
+>
+  <h1
+    class="sc-bxivhb gRPGPf"
+    data-testid="github-header"
+  >
+    Github Page
+  </h1>
+  <div
+    class="sc-bwzfXH cOksut"
+    data-testid="repo-list"
+  >
+    <div
+      class="sc-bdVaJa bDWFJH"
+    >
+      <p>
+        react
+      </p>
+      <p>
+        A declarative, efficient, and flexible JavaScript library for building user interfaces.
+      </p>
+      <p>
+        facebook/react
+      </p>
+      <p>
+        facebook
+      </p>
+      <img
+        src="https://avatars3.githubusercontent.com/u/69631?v=4"
+        alt="avatar"
+      />
+    </div>
+    <div
+      class="sc-bdVaJa bDWFJH"
+    >
+      <p>
+        react
+      </p>
+      <p>
+        Event-driven, non-blocking I/O with PHP.
+      </p>
+      <p>
+        reactphp/react
+      </p>
+      <p>
+        reactphp
+      </p>
+      <img
+        src="https://avatars2.githubusercontent.com/u/1696866?v=4"
+        alt="avatar"
+      />
+    </div>
+    <div
+      class="sc-bdVaJa bDWFJH"
+    >
+      <p>
+        react
+      </p>
+      <p>
+        一个react+redux+webpack+ES6+antd的SPA的后台管理底层框架
+      </p>
+      <p>
+        duxianwei520/react
+      </p>
+      <p>
+        duxianwei520
+      </p>
+      <img
+        src="https://avatars1.githubusercontent.com/u/3249653?v=4"
+        alt="avatar"
+      />
+    </div>
+    <div
+      class="sc-bdVaJa bDWFJH"
+    >
+      <p>
+        react
+      </p>
+      <p>
+        React docs in Chinese | React 中文文档翻译
+      </p>
+      <p>
+        discountry/react
+      </p>
+      <p>
+        discountry
+      </p>
+      <img
+        src="https://avatars0.githubusercontent.com/u/4507101?v=4"
+        alt="avatar"
+      />
+    </div>
+    <div
+      class="sc-bdVaJa bDWFJH"
+    >
+      <p>
+        ReactiveCocoa
+      </p>
+      <p>
+        Streams of values over time
+      </p>
+      <p>
+        ReactiveCocoa/ReactiveCocoa
+      </p>
+      <p>
+        ReactiveCocoa
+      </p>
+      <img
+        src="https://avatars0.githubusercontent.com/u/3422977?v=4"
+        alt="avatar"
+      />
+    </div>
+    <div
+      class="sc-bdVaJa bDWFJH"
+    >
+      <p>
+        react
+      </p>
+      <p>
+        京东首页构建
+      </p>
+      <p>
+        Cathy0807/react
+      </p>
+      <p>
+        Cathy0807
+      </p>
+      <img
+        src="https://avatars0.githubusercontent.com/u/20653643?v=4"
+        alt="avatar"
+      />
+    </div>
+    <div
+      class="sc-bdVaJa bDWFJH"
+    >
+      <p>
+        react-native
+      </p>
+      <p>
+        A framework for building native apps with React.
+      </p>
+      <p>
+        facebook/react-native
+      </p>
+      <p>
+        facebook
+      </p>
+      <img
+        src="https://avatars3.githubusercontent.com/u/69631?v=4"
+        alt="avatar"
+      />
+    </div>
+    <div
+      class="sc-bdVaJa bDWFJH"
+    >
+      <p>
+        react-router
+      </p>
+      <p>
+        Declarative routing for React
+      </p>
+      <p>
+        ReactTraining/react-router
+      </p>
+      <p>
+        ReactTraining
+      </p>
+      <img
+        src="https://avatars1.githubusercontent.com/u/11823761?v=4"
+        alt="avatar"
+      />
+    </div>
+    <div
+      class="sc-bdVaJa bDWFJH"
+    >
+      <p>
+        react
+      </p>
+      <p>
+        基于react的企业后台管理开发框架
+      </p>
+      <p>
+        react-redux-antd-es6/react
+      </p>
+      <p>
+        react-redux-antd-es6
+      </p>
+      <img
+        src="https://avatars3.githubusercontent.com/u/24805142?v=4"
+        alt="avatar"
+      />
+    </div>
+    <div
+      class="sc-bdVaJa bDWFJH"
+    >
+      <p>
+        create-react-app
+      </p>
+      <p>
+        Create React apps with no build configuration.
+      </p>
+      <p>
+        facebook/create-react-app
+      </p>
+      <p>
+        facebook
+      </p>
+      <img
+        src="https://avatars3.githubusercontent.com/u/69631?v=4"
+        alt="avatar"
+      />
+    </div>
+    <div
+      class="sc-bdVaJa bDWFJH"
+    >
+      <p>
+        react
+      </p>
+      <p>
+        Examples for the React Quickly book. 
+      </p>
+      <p>
+        azat-co/react
+      </p>
+      <p>
+        azat-co
+      </p>
+      <img
+        src="https://avatars1.githubusercontent.com/u/1137314?v=4"
+        alt="avatar"
+      />
+    </div>
+    <div
+      class="sc-bdVaJa bDWFJH"
+    >
+      <p>
+        storybook
+      </p>
+      <p>
+        Interactive UI component dev & test: React, React Native, Vue, Angular
+      </p>
+      <p>
+        storybooks/storybook
+      </p>
+      <p>
+        storybooks
+      </p>
+      <img
+        src="https://avatars3.githubusercontent.com/u/22632046?v=4"
+        alt="avatar"
+      />
+    </div>
+    <div
+      class="sc-bdVaJa bDWFJH"
+    >
+      <p>
+        react-redux-starter-kit
+      </p>
+      <p>
+        Get started with React, Redux, and React-Router.
+      </p>
+      <p>
+        davezuko/react-redux-starter-kit
+      </p>
+      <p>
+        davezuko
+      </p>
+      <img
+        src="https://avatars3.githubusercontent.com/u/6439050?v=4"
+        alt="avatar"
+      />
+    </div>
+    <div
+      class="sc-bdVaJa bDWFJH"
+    >
+      <p>
+        react-demos
+      </p>
+      <p>
+        a collection of simple demos of React.js
+      </p>
+      <p>
+        ruanyf/react-demos
+      </p>
+      <p>
+        ruanyf
+      </p>
+      <img
+        src="https://avatars0.githubusercontent.com/u/905434?v=4"
+        alt="avatar"
+      />
+    </div>
+    <div
+      class="sc-bdVaJa bDWFJH"
+    >
+      <p>
+        react
+      </p>
+      <p>
+        Extremely simple boilerplate, easiest you can find, for React application including all the necessary tools: Flow | React 16 | redux | babel 6 | webpack 3 | css-modules | jest | enzyme | express + optional: sass/scss
+      </p>
+      <p>
+        werein/react
+      </p>
+      <p>
+        werein
+      </p>
+      <img
+        src="https://avatars0.githubusercontent.com/u/3116920?v=4"
+        alt="avatar"
+      />
+    </div>
+    <div
+      class="sc-bdVaJa bDWFJH"
+    >
+      <p>
+        awesome-react
+      </p>
+      <p>
+        A collection of awesome things regarding React ecosystem.
+      </p>
+      <p>
+        enaqx/awesome-react
+      </p>
+      <p>
+        enaqx
+      </p>
+      <img
+        src="https://avatars1.githubusercontent.com/u/182219?v=4"
+        alt="avatar"
+      />
+    </div>
+    <div
+      class="sc-bdVaJa bDWFJH"
+    >
+      <p>
+        react-boilerplate
+      </p>
+      <p>
+        :fire: A highly scalable, offline-first foundation with the best developer experience and a focus on performance and best practices.
+      </p>
+      <p>
+        react-boilerplate/react-boilerplate
+      </p>
+      <p>
+        react-boilerplate
+      </p>
+      <img
+        src="https://avatars2.githubusercontent.com/u/25323389?v=4"
+        alt="avatar"
+      />
+    </div>
+    <div
+      class="sc-bdVaJa bDWFJH"
+    >
+      <p>
+        ReactiveUI
+      </p>
+      <p>
+        An advanced, composable, functional reactive model-view-viewmodel framework for all .NET platforms that is inspired by functional reactive programming. ReactiveUI allows you to  abstract mutable state away from your user interfaces, express the idea around a feature in one readable place and improve the testability of your application.
+      </p>
+      <p>
+        reactiveui/ReactiveUI
+      </p>
+      <p>
+        reactiveui
+      </p>
+      <img
+        src="https://avatars1.githubusercontent.com/u/2327577?v=4"
+        alt="avatar"
+      />
+    </div>
+    <div
+      class="sc-bdVaJa bDWFJH"
+    >
+      <p>
+        react
+      </p>
+      <p>
+        🔼 UI-Router for React
+      </p>
+      <p>
+        ui-router/react
+      </p>
+      <p>
+        ui-router
+      </p>
+      <img
+        src="https://avatars0.githubusercontent.com/u/16856735?v=4"
+        alt="avatar"
+      />
+    </div>
+    <div
+      class="sc-bdVaJa bDWFJH"
+    >
+      <p>
+        reactjs101
+      </p>
+      <p>
+        從零開始學 ReactJS（ReactJS 101）是一本希望讓初學者一看就懂的 ReactJS 中文入門教學書，由淺入深學習 ReactJS 生態系 (Flux, Redux, React Router, ImmutableJS, React Native, Relay/GraphQL etc.)。
+      </p>
+      <p>
+        kdchang/reactjs101
+      </p>
+      <p>
+        kdchang
+      </p>
+      <img
+        src="https://avatars3.githubusercontent.com/u/2097473?v=4"
+        alt="avatar"
+      />
+    </div>
+    <div
+      class="sc-bdVaJa bDWFJH"
+    >
+      <p>
+        react-select
+      </p>
+      <p>
+        A Select control built with and for React JS
+      </p>
+      <p>
+        JedWatson/react-select
+      </p>
+      <p>
+        JedWatson
+      </p>
+      <img
+        src="https://avatars3.githubusercontent.com/u/872310?v=4"
+        alt="avatar"
+      />
+    </div>
+    <div
+      class="sc-bdVaJa bDWFJH"
+    >
+      <p>
+        react-navigation
+      </p>
+      <p>
+        Routing and navigation for your React Native apps
+      </p>
+      <p>
+        react-navigation/react-navigation
+      </p>
+      <p>
+        react-navigation
+      </p>
+      <img
+        src="https://avatars2.githubusercontent.com/u/29647600?v=4"
+        alt="avatar"
+      />
+    </div>
+    <div
+      class="sc-bdVaJa bDWFJH"
+    >
+      <p>
+        reaction
+      </p>
+      <p>
+        Reaction is a customizable, real-time reactive, JavaScript commerce platform.
+      </p>
+      <p>
+        reactioncommerce/reaction
+      </p>
+      <p>
+        reactioncommerce
+      </p>
+      <img
+        src="https://avatars0.githubusercontent.com/u/5605462?v=4"
+        alt="avatar"
+      />
+    </div>
+    <div
+      class="sc-bdVaJa bDWFJH"
+    >
+      <p>
+        react-bootstrap
+      </p>
+      <p>
+        Bootstrap 3 components built with React
+      </p>
+      <p>
+        react-bootstrap/react-bootstrap
+      </p>
+      <p>
+        react-bootstrap
+      </p>
+      <img
+        src="https://avatars3.githubusercontent.com/u/6853419?v=4"
+        alt="avatar"
+      />
+    </div>
+    <div
+      class="sc-bdVaJa bDWFJH"
+    >
+      <p>
+        reactGo
+      </p>
+      <p>
+        Your One-Stop solution for a full-stack universal Redux App!
+      </p>
+      <p>
+        reactGo/reactGo
+      </p>
+      <p>
+        reactGo
+      </p>
+      <img
+        src="https://avatars2.githubusercontent.com/u/20782186?v=4"
+        alt="avatar"
+      />
+    </div>
+    <div
+      class="sc-bdVaJa bDWFJH"
+    >
+      <p>
+        react-redux
+      </p>
+      <p>
+        Official React bindings for Redux
+      </p>
+      <p>
+        reactjs/react-redux
+      </p>
+      <p>
+        reactjs
+      </p>
+      <img
+        src="https://avatars3.githubusercontent.com/u/6412038?v=4"
+        alt="avatar"
+      />
+    </div>
+    <div
+      class="sc-bdVaJa bDWFJH"
+    >
+      <p>
+        react-starter-kit
+      </p>
+      <p>
+        React Starter Kit — isomorphic web app boilerplate (Node.js, Express, GraphQL, React.js, Babel, PostCSS, Webpack, Browsersync)
+      </p>
+      <p>
+        kriasoft/react-starter-kit
+      </p>
+      <p>
+        kriasoft
+      </p>
+      <img
+        src="https://avatars2.githubusercontent.com/u/773036?v=4"
+        alt="avatar"
+      />
+    </div>
+    <div
+      class="sc-bdVaJa bDWFJH"
+    >
+      <p>
+        ReactNativeReduxCasts
+      </p>
+      <p>
+        Companion Repo for The Complete React Native and Redux Course
+      </p>
+      <p>
+        StephenGrider/ReactNativeReduxCasts
+      </p>
+      <p>
+        StephenGrider
+      </p>
+      <img
+        src="https://avatars1.githubusercontent.com/u/5003903?v=4"
+        alt="avatar"
+      />
+    </div>
+    <div
+      class="sc-bdVaJa bDWFJH"
+    >
+      <p>
+        React-For-Beginners-Starter-Files
+      </p>
+      <p>
+        Starter files for learning React.js with React for Beginners
+      </p>
+      <p>
+        wesbos/React-For-Beginners-Starter-Files
+      </p>
+      <p>
+        wesbos
+      </p>
+      <img
+        src="https://avatars2.githubusercontent.com/u/176013?v=4"
+        alt="avatar"
+      />
+    </div>
+    <div
+      class="sc-bdVaJa bDWFJH"
+    >
+      <p>
+        React
+      </p>
+      <p>
+        写写React组件
+      </p>
+      <p>
+        leilihuang/React
+      </p>
+      <p>
+        leilihuang
+      </p>
+      <img
+        src="https://avatars1.githubusercontent.com/u/13639327?v=4"
+        alt="avatar"
+      />
+    </div>
+  </div>
+</div>
+`;

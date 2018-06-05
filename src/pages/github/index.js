@@ -1,5 +1,5 @@
 // @flow
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import styled from 'styled-components'
 import axios from 'axios'
 import { connect } from 'redux-vanilla'
@@ -61,7 +61,13 @@ export class Github extends Component<Props> {
     return (
       <Container>
         <Header data-testid="github-header">Github Page</Header>
-        {isLoading ? <Loading /> : <List data={repositoryList} />}
+        {isLoading ? (
+          <div data-testid="loading">
+            <Loading />
+          </div>
+        ) : (
+          <List data={repositoryList} />
+        )}
       </Container>
     )
   }

@@ -26,7 +26,7 @@ const List = (props: Props) => {
   }
 
   return (
-    <Container>
+    <Container data-testid="repo-list">
       {data.map((r: Repository) => <Item repository={r} key={r.id} />)}
     </Container>
   )

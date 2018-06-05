@@ -30,17 +30,26 @@ describe('github page', () => {
       }
     }
 
-    const { getByTestId, debug, container } = render(<DispatchEmitter />)
+    // before Mmout, it meant isLoading false
+    expect(store.getState().app.isLoading).toBe(false)
 
+    // mount, it meant isLoading true
+    const { getByTestId, container } = render(<DispatchEmitter />)
+
+    expect(store.getState().app.isLoading).toBe(true)
+    expect(getByTestId('loading')).toBeInTheDOM()
     expect(getByTestId('github-header')).toHaveTextContent('Github Page')
     expect(axios.get).toHaveBeenCalledTimes(1)
     expect(axios.get).toHaveBeenCalledWith(
       'https://api.github.com/search/repositories?q=react'
     )
-    expect(store.getState().app.isLoading).toBe(true)
 
+    // dispatch fetch data to redux
     await wait()
 
+    // after fetch data
     expect(store.getState().app.isLoading).toBe(false)
+    expect(getByTestId('repo-list')).toBeInTheDOM()
+    expect(container.firstChild).toMatchSnapshot()
   })
 })
