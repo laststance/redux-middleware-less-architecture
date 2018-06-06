@@ -27,9 +27,34 @@ follwing example are my preffer straightforward way.
 ## Example
 
 ```js
-type Props = { app: ReduxState, dispatch: Dispatch<ReduxAction> }
+// @flow
+import React, { Component } from 'react'
+import styled from 'styled-components'
+import axios from 'axios'
+import { connect } from 'redux-vanilla'
+import { Loading } from '../../element'
+import { actionType as type } from '../../types/ReduxAction'
+import List from './List'
+import type { RootReduxState } from '../../types/ReduxState'
+import type { Dispatch } from 'redux'
+import type { RepositoryList } from '../../types/APIDataModel'
+import type { ReduxAction } from '../../types/ReduxAction'
 
-class Github extends Component<Props> {
+const Container = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+`
+const Header = styled.h1`
+  flex-basis: 1;
+`
+
+type Props = {| state: RootReduxState, dispatch: Dispatch<ReduxAction> |}
+
+export class Github extends Component<Props> {
   fetchRepository = async () => {
     const dispatch = this.props.dispatch
 
@@ -46,7 +71,7 @@ class Github extends Component<Props> {
 
       dispatch({
         type: type.ASYNC_FETCH_REPOSITORY,
-        payload: { repositoryList: repositoryList }
+        payload: { repositoryList }
       })
     } catch (e) {
       console.error(e)
@@ -58,35 +83,26 @@ class Github extends Component<Props> {
   }
 
   render() {
-    const { isLoading, repositoryList } = this.props.app
-    const repoList = this.getRepoList(repositoryList)
+    const {
+      app: { isLoading, repositoryList }
+    } = this.props.state
 
     return (
       <Container>
-        <Header>Github Page</Header>
-        <List>{isLoading ? <Loading /> : repoList}</List>
+        <Header data-testid="github-header">Github Page</Header>
+        {isLoading ? (
+          <div data-testid="loading">
+            <Loading />
+          </div>
+        ) : (
+          <List data={repositoryList} />
+        )}
       </Container>
-    )
-  }
-
-  getRepoList(repositoryList: RepositoryList): React.Element<any> {
-    return repositoryList.length ? (
-      repositoryList.map((r: Repository) => (
-        <Item key={r.id}>
-          <p>{r.name}</p>
-          <p>{r.description}</p>
-          <p>{r.full_name}</p>
-          <p>{r.owner.login}</p>
-          <img src={r.owner.avatar_url} alt="avatar" />
-        </Item>
-      ))
-    ) : (
-      <p>no items.</p>
     )
   }
 }
 
-export default connect((state: RootReduxState) => state)(Github)
+export default connect(Github)
 ```
 
 ## Inspiration
