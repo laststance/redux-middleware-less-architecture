@@ -49,7 +49,8 @@ describe('github page', () => {
 
     // after fetch data
     expect(store.getState().app.isLoading).toBe(false)
-    expect(getByTestId('repo-list')).toBeInTheDOM()
+    const list = getByTestId('repo-list')
+    expect(list.children.length).toBe(30)
     expect(container.firstChild).toMatchSnapshot()
   })
 })
