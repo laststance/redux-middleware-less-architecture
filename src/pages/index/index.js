@@ -8,7 +8,7 @@ const index = () => {
   return (
     <Container>
       <Top>
-        <h1>Index Page</h1>
+        <h1>Redux Zero Middleware Example</h1>
       </Top>
       <Bottom>
         <Link to="/github">GitHub Page</Link>
