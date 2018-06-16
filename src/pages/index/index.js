@@ -8,10 +8,10 @@ const index = () => {
   return (
     <Container>
       <Head>
-        <h1>Redux Zero Middleware Example</h1>
+        <h1>Redux Zero Middleware</h1>
       </Head>
       <Github>
-        <Link to="/github">GitHub Page</Link>
+        <Link to="/github">GitHub Repo Search Example</Link>
       </Github>
     </Container>
   )
