@@ -33,20 +33,16 @@ export class Github extends Component<Props> {
     dispatch({ type: type.START_ASYNC })
 
     // Call API
-    try {
-      const query = 'react'
-      const response = await axios.get(
-        `https://api.github.com/search/repositories?q=${query}`
-      )
-      const repositoryList: RepositoryList = response.data.items
+    const query = 'react'
+    const response = await axios.get(
+      `https://api.github.com/search/repositories?q=${query}`
+    )
+    const repositoryList: RepositoryList = response.data.items
 
-      dispatch({
-        type: type.ASYNC_FETCH_REPOSITORY,
-        payload: { repositoryList }
-      })
-    } catch (e) {
-      console.error(e)
-    }
+    dispatch({
+      type: type.ASYNC_FETCH_REPOSITORY,
+      payload: { repositoryList }
+    })
   }
 
   componentDidMount() {
