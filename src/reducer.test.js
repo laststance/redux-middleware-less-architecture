@@ -1,8 +1,6 @@
 // @flow
 import { createStore } from 'redux'
 import appReducer from './reducer'
-import { emptyArray } from './reducer'
-import { actionType as type } from './types/ReduxAction'
 import { repository } from './testutil/dummyRepository'
 import type { Store } from 'redux'
 import type { RepositoryList } from './types/APIDataModel'
@@ -19,14 +17,14 @@ describe('INIT', () => {
 
   it('should "initialized by redux." defined in initialState', () => {
     const store: Store<AppState, ReduxAction> = createStore(appReducer)
-    store.dispatch({ type: type.INIT })
+    store.dispatch({ type: '@@/App/INIT' })
     const state: AppState = store.getState()
 
     expect(state.boot).toBe('initialized by redux.')
   })
 })
 
-describe('START_ASYNC', () => {
+describe('START_LOADING', () => {
   it('should isLoading:false defined in initialState', () => {
     const store: Store<AppState, ReduxAction> = createStore(appReducer)
     const state: AppState = store.getState()
@@ -36,26 +34,26 @@ describe('START_ASYNC', () => {
 
   it('should be isLoading:true when dispatched START_ASYNC', () => {
     const store: Store<AppState, ReduxAction> = createStore(appReducer)
-    store.dispatch({ type: type.START_ASYNC })
+    store.dispatch({ type: '@@/App/START_LOADING' })
     const state: AppState = store.getState()
 
     expect(state.isLoading).toBe(true)
   })
 })
 
-describe('ASYNC_FETCH_REPOSITORY', () => {
+describe('FETCH_REPOSITORY', () => {
   it('should emptyArray defined in initianlState ', () => {
     const store: Store<AppState, ReduxAction> = createStore(appReducer)
     const state: AppState = store.getState()
 
-    expect(state.repositoryList).toBe([])
+    expect(state.repositoryList).toEqual([])
   })
 
   it('should set repositoryList when dispatch', () => {
     const store: Store<AppState, ReduxAction> = createStore(appReducer)
     const repositoryList: RepositoryList = [repository]
     store.dispatch({
-      type: type.ASYNC_FETCH_REPOSITORY,
+      type: '@@/App/FETCH_REPOSITORY',
       payload: { repositoryList }
     })
     const state: AppState = store.getState()
@@ -67,9 +65,9 @@ describe('ASYNC_FETCH_REPOSITORY', () => {
     const store: Store<AppState, ReduxAction> = createStore(appReducer)
     const repositoryList: RepositoryList = [repository]
 
-    store.dispatch({ type: type.START_ASYNC })
+    store.dispatch({ type: '@@/App/START_LOADING' })
     store.dispatch({
-      type: type.ASYNC_FETCH_REPOSITORY,
+      type: '@@/App/FETCH_REPOSITORY',
       payload: {
         repositoryList
       }

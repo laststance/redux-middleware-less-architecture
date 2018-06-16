@@ -1,6 +1,5 @@
 // @flow
 import type { ReduxAction } from './types/ReduxAction'
-import { actionType as type } from './types/ReduxAction'
 import type { Reducer } from 'redux'
 import type { RepositoryList } from './types/APIDataModel'
 
@@ -35,13 +34,13 @@ const appReducer: Reducer<AppState, ReduxAction> = (
   action: ReduxAction
 ): AppState => {
   switch (action.type) {
-    case type.INIT:
+    case '@@/App/INIT':
       return { ...state, boot: 'initialized by redux.' }
 
-    case type.START_ASYNC:
+    case '@@/App/START_LOADING':
       return { ...state, isLoading: true }
 
-    case type.ASYNC_FETCH_REPOSITORY:
+    case '@@/App/FETCH_REPOSITORY':
       return {
         ...state,
         repositoryList: action.payload.repositoryList,

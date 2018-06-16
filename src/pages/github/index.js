@@ -4,7 +4,6 @@ import styled from 'styled-components'
 import axios from 'axios'
 import { connect } from 'redux-vanilla'
 import { Loading } from '../../element'
-import { actionType as type } from '../../types/ReduxAction'
 import List from './List'
 import type { RootReduxState } from '../../reducer'
 import type { Dispatch } from 'redux'
@@ -30,7 +29,7 @@ export class Github extends Component<Props> {
     const dispatch = this.props.dispatch
 
     // Loading...
-    dispatch({ type: type.START_ASYNC })
+    dispatch({ type: '@@/App/START_LOADING' })
 
     // Call API
     const query = 'react'
@@ -40,7 +39,7 @@ export class Github extends Component<Props> {
     const repositoryList: RepositoryList = response.data.items
 
     dispatch({
-      type: type.ASYNC_FETCH_REPOSITORY,
+      type: '@@/App/FETCH_REPOSITORY',
       payload: { repositoryList }
     })
   }
