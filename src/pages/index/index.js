@@ -1,18 +1,18 @@
 // @flow
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Container, Top, Bottom } from './style'
+import { Container, Head, Github } from './style'
 
 // TODO Error Bound
 const index = () => {
   return (
     <Container>
-      <Top>
+      <Head>
         <h1>Redux Zero Middleware Example</h1>
-      </Top>
-      <Bottom>
+      </Head>
+      <Github>
         <Link to="/github">GitHub Page</Link>
-      </Bottom>
+      </Github>
     </Container>
   )
 }
