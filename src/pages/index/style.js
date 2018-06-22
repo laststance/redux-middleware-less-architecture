@@ -9,11 +9,13 @@ export const Container = styled.div`
   justify-content: flex-start;
   align-items: center;
 `
+
 export const Head = styled.div`
   width: 100%;
   height: 20%;
   ${flexRowCenter};
 `
+
 export const Github = styled.div`
   width: 60%;
   height: 10%;
