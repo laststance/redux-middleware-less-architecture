@@ -1,5 +1,5 @@
 // @flow
-import type { RepositoryList } from './APIDataModel'
+import type { RepositoryList } from './types/APIDataModel'
 
 export type InitAction = {
   type: '@@/App/INIT',

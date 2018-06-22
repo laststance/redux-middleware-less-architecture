@@ -8,7 +8,7 @@ import List from './List'
 import type { RootReduxState } from '../../reducer'
 import type { Dispatch } from 'redux'
 import type { RepositoryList } from '../../types/APIDataModel'
-import type { ReduxAction } from '../../types/ReduxAction'
+import type { ReduxAction } from '../../ReduxAction'
 
 type Props = {| state: RootReduxState, dispatch: Dispatch<ReduxAction> |}
 
