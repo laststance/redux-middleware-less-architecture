@@ -14,7 +14,7 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 ## What's this?
-Redux No Middleware Pattarn is code example repository.  
+this is code example of React/Redux, pattern of write without Middleware from async.  
 it's a [create-react-app](https://github.com/facebook/create-react-app) based, please see [/src](https://github.com/ryota-murakami/redux-no-middleware-pattarn/tree/master/src) folder.  
 
 also you could see [LIVE DEMO](https://hardcore-leavitt-db43ed.netlify.com/)💻 with redux-devtools chrome extention on the page.
@@ -29,28 +29,15 @@ follwing example are my preffer straightforward way.
 ```js
 // @flow
 import React, { Component } from 'react'
-import styled from 'styled-components'
 import axios from 'axios'
 import { connect } from 'redux-vanilla'
 import { Loading } from '../../element'
-import { actionType as type } from '../../types/ReduxAction'
+import { Container, Header } from './style'
 import List from './List'
-import type { RootReduxState } from '../../types/ReduxState'
+import type { RootReduxState } from '../../reducer'
 import type { Dispatch } from 'redux'
 import type { RepositoryList } from '../../types/APIDataModel'
-import type { ReduxAction } from '../../types/ReduxAction'
-
-const Container = styled.div`
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-`
-const Header = styled.h1`
-  flex-basis: 1;
-`
+import type { ReduxAction } from '../../action'
 
 type Props = {| state: RootReduxState, dispatch: Dispatch<ReduxAction> |}
 
@@ -59,23 +46,19 @@ export class Github extends Component<Props> {
     const dispatch = this.props.dispatch
 
     // Loading...
-    dispatch({ type: type.START_ASYNC })
+    dispatch({ type: 'START_LOADING' })
 
     // Call API
-    try {
-      const query = 'react'
-      const response = await axios.get(
-        `https://api.github.com/search/repositories?q=${query}`
-      )
-      const repositoryList: RepositoryList = response.data.items
+    const query = 'react'
+    const response = await axios.get(
+      `https://api.github.com/search/repositories?q=${query}`
+    )
+    const repositoryList: RepositoryList = response.data.items
 
-      dispatch({
-        type: type.ASYNC_FETCH_REPOSITORY,
-        payload: { repositoryList }
-      })
-    } catch (e) {
-      console.error(e)
-    }
+    dispatch({
+      type: 'FETCH_REPOSITORY',
+      payload: { repositoryList }
+    })
   }
 
   componentDidMount() {
