@@ -3,26 +3,22 @@ import type { ReduxAction } from './action'
 import type { Reducer } from 'redux'
 import type { RepositoryList } from './types/APIDataModel'
 
-export type AppState = {
+export type ReduxState = {
   boot: string,
   isLoading: boolean,
   repositoryList: RepositoryList
 }
 
-export type ReduxState = {
-  app: AppState
-}
-
-export const initialState: AppState = {
+export const initialState: ReduxState = {
   boot: 'uninitialized.',
   isLoading: false,
   repositoryList: []
 }
 
-const reducer: Reducer<AppState, ReduxAction> = (
-  state: AppState = initialState,
+const reducer: Reducer<ReduxState, ReduxAction> = (
+  state: ReduxState = initialState,
   action: ReduxAction
-): AppState => {
+): ReduxState => {
   switch (action.type) {
     case '@@/App/INIT':
       return { ...state, boot: 'initialized by redux.' }
