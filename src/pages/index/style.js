@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 import { flexRowCenter, theme } from '../../const'
 
 export const Container = styled.div`
@@ -16,7 +17,7 @@ export const Head = styled.div`
   ${flexRowCenter};
 `
 
-export const Github = styled.div`
+export const Github = styled(Link)`
   width: 60%;
   height: 10%;
   ${flexRowCenter};
