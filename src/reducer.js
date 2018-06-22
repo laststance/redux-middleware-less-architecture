@@ -3,13 +3,6 @@ import type { ReduxAction } from './action'
 import type { Reducer } from 'redux'
 import type { RepositoryList } from './types/APIDataModel'
 
-// react-router
-export type Location = {
-  pathname: string,
-  search: string,
-  hash: string
-}
-
 export type AppState = {
   boot: string,
   isLoading: boolean,
@@ -17,10 +10,7 @@ export type AppState = {
 }
 
 export type ReduxState = {
-  app: AppState,
-  router: {
-    location: Location
-  }
+  app: AppState
 }
 
 export const initialState: AppState = {

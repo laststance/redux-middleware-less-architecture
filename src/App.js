@@ -1,23 +1,19 @@
 // @flow
 import React from 'react'
-import { Route } from 'react-router'
-import { ConnectedRouter } from 'react-router-redux'
-import createHistory from 'history/createBrowserHistory'
+import { BrowserRouter, Route } from 'react-router-dom'
 import { Provider } from 'redux-vanilla'
 import IndexPage from './pages/index'
 import GithubPage from './pages/github'
 import { store } from './store'
 import './index.css'
 
-const history = createHistory()
-
 export const App = () => (
   <Provider store={store}>
-    <ConnectedRouter history={history}>
+    <BrowserRouter>
       <div id="coroot">
         <Route exact path="/" component={IndexPage} />
         <Route exact path="/github" component={GithubPage} />
       </div>
-    </ConnectedRouter>
+    </BrowserRouter>
   </Provider>
 )

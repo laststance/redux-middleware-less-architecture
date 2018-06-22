@@ -1,8 +1,5 @@
-import { routerReducer, routerMiddleware } from 'react-router-redux'
-import { createStore, applyMiddleware, combineReducers, compose } from 'redux'
+import { createStore, combineReducers } from 'redux'
 import appReducer from './reducer'
-
-const middleware = routerMiddleware()
 
 const devToolsExtension =
   window.__REDUX_DEVTOOLS_EXTENSION__ !== undefined
@@ -10,6 +7,6 @@ const devToolsExtension =
     : f => f
 
 export const store = createStore(
-  combineReducers({ app: appReducer, router: routerReducer }),
-  compose(applyMiddleware(middleware), devToolsExtension)
+  combineReducers({ app: appReducer }),
+  devToolsExtension
 )
