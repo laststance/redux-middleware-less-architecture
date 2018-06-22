@@ -31,12 +31,12 @@ describe('github page', () => {
     }
 
     // before Mmout, it meant isLoading false
-    expect(store.getState().app.isLoading).toBe(false)
+    expect(store.getState().isLoading).toBe(false)
 
     // mount, it meant isLoading true
     const { getByTestId, container } = render(<DispatchEmitter />)
 
-    expect(store.getState().app.isLoading).toBe(true)
+    expect(store.getState().isLoading).toBe(true)
     expect(getByTestId('loading')).toBeInTheDOM()
     expect(getByTestId('github-header')).toHaveTextContent('Github Page')
     expect(axios.get).toHaveBeenCalledTimes(1)
@@ -48,7 +48,7 @@ describe('github page', () => {
     await wait()
 
     // after fetch data
-    expect(store.getState().app.isLoading).toBe(false)
+    expect(store.getState().isLoading).toBe(false)
     const list = getByTestId('repo-list')
     expect(list.children.length).toBe(30)
     expect(container.firstChild).toMatchSnapshot()

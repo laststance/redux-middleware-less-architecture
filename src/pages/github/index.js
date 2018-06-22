@@ -37,9 +37,7 @@ export class Github extends Component<Props> {
   }
 
   render() {
-    const {
-      app: { isLoading, repositoryList }
-    } = this.props.state
+    const { isLoading, repositoryList } = this.props.state
 
     return (
       <Container>

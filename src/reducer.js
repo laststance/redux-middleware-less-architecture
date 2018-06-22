@@ -19,7 +19,7 @@ export const initialState: AppState = {
   repositoryList: []
 }
 
-const appReducer: Reducer<AppState, ReduxAction> = (
+const reducer: Reducer<AppState, ReduxAction> = (
   state: AppState = initialState,
   action: ReduxAction
 ): AppState => {
@@ -42,4 +42,4 @@ const appReducer: Reducer<AppState, ReduxAction> = (
   }
 }
 
-export default appReducer
+export default reducer

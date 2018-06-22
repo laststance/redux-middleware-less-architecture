@@ -1,6 +1,6 @@
 // @flow
 import { createStore } from 'redux'
-import appReducer from './reducer'
+import reducer from './reducer'
 import { repository } from './testutil/dummyRepository'
 import type { Store } from 'redux'
 import type { RepositoryList } from './types/APIDataModel'
@@ -9,14 +9,14 @@ import type { ReduxAction } from './action'
 
 describe('INIT', () => {
   it('should "uninitialized." defined in initialState', () => {
-    const store: Store<AppState, ReduxAction> = createStore(appReducer)
+    const store: Store<AppState, ReduxAction> = createStore(reducer)
     const state: AppState = store.getState()
 
     expect(state.boot).toBe('uninitialized.')
   })
 
   it('should "initialized by redux." defined in initialState', () => {
-    const store: Store<AppState, ReduxAction> = createStore(appReducer)
+    const store: Store<AppState, ReduxAction> = createStore(reducer)
     store.dispatch({ type: '@@/App/INIT' })
     const state: AppState = store.getState()
 
@@ -26,14 +26,14 @@ describe('INIT', () => {
 
 describe('START_LOADING', () => {
   it('should isLoading:false defined in initialState', () => {
-    const store: Store<AppState, ReduxAction> = createStore(appReducer)
+    const store: Store<AppState, ReduxAction> = createStore(reducer)
     const state: AppState = store.getState()
 
     expect(state.isLoading).toBe(false)
   })
 
   it('should be isLoading:true when dispatched START_ASYNC', () => {
-    const store: Store<AppState, ReduxAction> = createStore(appReducer)
+    const store: Store<AppState, ReduxAction> = createStore(reducer)
     store.dispatch({ type: 'START_LOADING' })
     const state: AppState = store.getState()
 
@@ -43,14 +43,14 @@ describe('START_LOADING', () => {
 
 describe('FETCH_REPOSITORY', () => {
   it('should emptyArray defined in initianlState ', () => {
-    const store: Store<AppState, ReduxAction> = createStore(appReducer)
+    const store: Store<AppState, ReduxAction> = createStore(reducer)
     const state: AppState = store.getState()
 
     expect(state.repositoryList).toEqual([])
   })
 
   it('should set repositoryList when dispatch', () => {
-    const store: Store<AppState, ReduxAction> = createStore(appReducer)
+    const store: Store<AppState, ReduxAction> = createStore(reducer)
     const repositoryList: RepositoryList = [repository]
     store.dispatch({
       type: 'FETCH_REPOSITORY',
@@ -62,7 +62,7 @@ describe('FETCH_REPOSITORY', () => {
   })
 
   it('should set isLoading:false when dispatch', () => {
-    const store: Store<AppState, ReduxAction> = createStore(appReducer)
+    const store: Store<AppState, ReduxAction> = createStore(reducer)
     const repositoryList: RepositoryList = [repository]
 
     store.dispatch({ type: 'START_LOADING' })
