@@ -16,7 +16,7 @@ export type AppState = {
   repositoryList: RepositoryList
 }
 
-export type RootReduxState = {
+export type ReduxState = {
   app: AppState,
   router: {
     location: Location

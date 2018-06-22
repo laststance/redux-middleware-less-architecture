@@ -5,12 +5,12 @@ import { connect } from 'redux-vanilla'
 import { Loading } from '../../element'
 import { Container, Header } from './style'
 import List from './List'
-import type { RootReduxState } from '../../reducer'
+import type { ReduxState } from '../../reducer'
 import type { Dispatch } from 'redux'
 import type { RepositoryList } from '../../types/APIDataModel'
 import type { ReduxAction } from '../../action'
 
-type Props = {| state: RootReduxState, dispatch: Dispatch<ReduxAction> |}
+type Props = {| state: ReduxState, dispatch: Dispatch<ReduxAction> |}
 
 export class Github extends Component<Props> {
   fetchRepository = async () => {
