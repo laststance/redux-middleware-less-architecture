@@ -1,26 +1,14 @@
 // @flow
 import React, { Component } from 'react'
-import styled from 'styled-components'
 import axios from 'axios'
 import { connect } from 'redux-vanilla'
 import { Loading } from '../../element'
+import { Container, Header } from './style'
 import List from './List'
 import type { RootReduxState } from '../../reducer'
 import type { Dispatch } from 'redux'
 import type { RepositoryList } from '../../types/APIDataModel'
 import type { ReduxAction } from '../../types/ReduxAction'
-
-const Container = styled.div`
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-`
-const Header = styled.h1`
-  flex-basis: 1;
-`
 
 type Props = {| state: RootReduxState, dispatch: Dispatch<ReduxAction> |}
 
