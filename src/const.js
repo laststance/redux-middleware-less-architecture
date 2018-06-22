@@ -8,7 +8,6 @@ export const flexRowCenter = css`
 `
 
 export const theme = {
-  hoverBg: css`
-    background-color: rgba(32, 37, 41, 0.1);
-  `
+  baseGray: 'rgba(32, 37, 41, 1)',
+  hoverBg: 'rgba(32, 37, 41, 0.1)'
 }

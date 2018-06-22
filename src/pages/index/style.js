@@ -21,9 +21,12 @@ export const Github = styled.div`
   height: 10%;
   ${flexRowCenter};
   border-radius: 10px;
+  border: ${theme.baseGray};
+  border-width: 2px;
+  border-style: solid;
   transition: background-color 0.25s;
 
   &:hover {
-    ${theme.hoverBg};
+    background-color: ${theme.hoverBg};
   }
 `
