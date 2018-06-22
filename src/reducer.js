@@ -1,5 +1,5 @@
 // @flow
-import type { ReduxAction } from './ReduxAction'
+import type { ReduxAction } from './action'
 import type { Reducer } from 'redux'
 import type { RepositoryList } from './types/APIDataModel'
 

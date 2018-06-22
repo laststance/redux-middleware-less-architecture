@@ -5,7 +5,7 @@ import { repository } from './testutil/dummyRepository'
 import type { Store } from 'redux'
 import type { RepositoryList } from './types/APIDataModel'
 import type { AppState } from './reducer'
-import type { ReduxAction } from './ReduxAction'
+import type { ReduxAction } from './action'
 
 describe('INIT', () => {
   it('should "uninitialized." defined in initialState', () => {
