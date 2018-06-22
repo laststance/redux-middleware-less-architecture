@@ -37,10 +37,10 @@ const appReducer: Reducer<AppState, ReduxAction> = (
     case '@@/App/INIT':
       return { ...state, boot: 'initialized by redux.' }
 
-    case '@@/App/START_LOADING':
+    case 'START_LOADING':
       return { ...state, isLoading: true }
 
-    case '@@/App/FETCH_REPOSITORY':
+    case 'FETCH_REPOSITORY':
       return {
         ...state,
         repositoryList: action.payload.repositoryList,

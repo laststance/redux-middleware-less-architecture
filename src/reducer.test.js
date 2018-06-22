@@ -34,7 +34,7 @@ describe('START_LOADING', () => {
 
   it('should be isLoading:true when dispatched START_ASYNC', () => {
     const store: Store<AppState, ReduxAction> = createStore(appReducer)
-    store.dispatch({ type: '@@/App/START_LOADING' })
+    store.dispatch({ type: 'START_LOADING' })
     const state: AppState = store.getState()
 
     expect(state.isLoading).toBe(true)
@@ -53,7 +53,7 @@ describe('FETCH_REPOSITORY', () => {
     const store: Store<AppState, ReduxAction> = createStore(appReducer)
     const repositoryList: RepositoryList = [repository]
     store.dispatch({
-      type: '@@/App/FETCH_REPOSITORY',
+      type: 'FETCH_REPOSITORY',
       payload: { repositoryList }
     })
     const state: AppState = store.getState()
@@ -65,9 +65,9 @@ describe('FETCH_REPOSITORY', () => {
     const store: Store<AppState, ReduxAction> = createStore(appReducer)
     const repositoryList: RepositoryList = [repository]
 
-    store.dispatch({ type: '@@/App/START_LOADING' })
+    store.dispatch({ type: 'START_LOADING' })
     store.dispatch({
-      type: '@@/App/FETCH_REPOSITORY',
+      type: 'FETCH_REPOSITORY',
       payload: {
         repositoryList
       }

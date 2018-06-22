@@ -7,11 +7,11 @@ export type InitAction = {
 }
 
 export type StartLoadingAction = {
-  type: '@@/App/START_LOADING'
+  type: 'START_LOADING'
 }
 
 export type FetchRepositoryAction = {
-  type: '@@/App/FETCH_REPOSITORY',
+  type: 'FETCH_REPOSITORY',
   payload: { repositoryList: RepositoryList, isLoading: false }
 }
 

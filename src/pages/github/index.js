@@ -29,7 +29,7 @@ export class Github extends Component<Props> {
     const dispatch = this.props.dispatch
 
     // Loading...
-    dispatch({ type: '@@/App/START_LOADING' })
+    dispatch({ type: 'START_LOADING' })
 
     // Call API
     const query = 'react'
@@ -39,7 +39,7 @@ export class Github extends Component<Props> {
     const repositoryList: RepositoryList = response.data.items
 
     dispatch({
-      type: '@@/App/FETCH_REPOSITORY',
+      type: 'FETCH_REPOSITORY',
       payload: { repositoryList }
     })
   }
