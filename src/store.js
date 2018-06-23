@@ -1,9 +1,4 @@
 import { createStore } from 'redux'
 import reducer from './reducer'
 
-const devToolsExtension =
-  window.__REDUX_DEVTOOLS_EXTENSION__ !== undefined
-    ? window.__REDUX_DEVTOOLS_EXTENSION__()
-    : f => f
-
-export const store = createStore(reducer, devToolsExtension)
+export const store = createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
