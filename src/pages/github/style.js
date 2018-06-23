@@ -11,3 +11,5 @@ export const Container = styled.div`
 export const Header = styled.h1`
   flex-basis: 1;
 `
+
+export const Form = styled.div``

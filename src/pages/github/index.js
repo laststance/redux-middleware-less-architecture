@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import { connect } from 'redux-vanilla'
 import { Loading } from '../../element'
-import { Container, Header } from './style'
+import { Container, Header, Form } from './style'
 import List from './List'
 import type { ReduxState } from '../../reducer'
 import type { Dispatch } from 'redux'
@@ -41,7 +41,8 @@ export class Github extends Component<Props> {
 
     return (
       <Container>
-        <Header data-testid="github-header">Github Page</Header>
+        <Header data-testid="github-header">GitHub Repo Search Example</Header>
+        <Form />
         {isLoading ? (
           <div data-testid="loading">
             <Loading />
