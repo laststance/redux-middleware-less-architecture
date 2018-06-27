@@ -1,4 +1,4 @@
-# Redux Zero Middleware
+# Redux Less Boilerplate
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/ryota-murakami/redux-zero-middleware.svg)](https://greenkeeper.io/)
 [![CircleCI](https://circleci.com/gh/ryota-murakami/redux-zero-middleware.svg?style=svg)](https://circleci.com/gh/ryota-murakami/redux-zero-middleware)
