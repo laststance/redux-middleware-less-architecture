@@ -50,7 +50,7 @@
     "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-react": "^7.10.0",
     "flow-bin": "^0.75.0",
-    "prettier": "^1.11.1",
+    "prettier": "^1.13.7",
     "react-app-rewire-styled-components": "^3.0.2",
     "react-app-rewired": "^1.5.2",
     "react-scripts": "^1.1.4",
