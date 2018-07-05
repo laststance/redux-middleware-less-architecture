@@ -13,20 +13,19 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 ## What's this?
-this is code example of React/Redux, pattern of write without Middleware from async.  
-it's a [create-react-app](https://github.com/facebook/create-react-app) based, please see [/src](https://github.com/ryota-murakami/redux-no-middleware-pattarn/tree/master/src) folder.  
+this is code example of write React/Redux application from boilerplate less.  
+This is [create-react-app](https://github.com/facebook/create-react-app) based, please see [/src](https://github.com/ryota-murakami/redux-no-middleware-pattarn/tree/master/src) folder.  
 
 also you could see [LIVE DEMO](https://hardcore-leavitt-db43ed.netlify.com/)💻 with redux-devtools chrome extention on the page.
 
 ## Concept
-in 2018, Evolved JS syntax has capability of write as well smart async handling logic.  
-i suppose redux-thunk like middleware isn't necessary when dispatch redux action during async logic.  
-follwing example are my preffer straightforward way.
+
 
 ## Example
 
 ## Inspiration
-[why-do-we-need-middleware-for-async-flow-in-redux](https://stackoverflow.com/questions/34570758/why-do-we-need-middleware-for-async-flow-in-redux)
+- [counter-vanilla](https://github.com/reactjs/redux/blob/master/examples/counter-vanilla/index.html)
+- [why-do-we-need-middleware-for-async-flow-in-redux](https://stackoverflow.com/questions/34570758/why-do-we-need-middleware-for-async-flow-in-redux)
 
 
 ## Contributors
