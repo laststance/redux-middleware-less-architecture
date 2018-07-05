@@ -1,7 +1,7 @@
 # Redux Boilerplate Less Architecture
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/ryota-murakami/redux-zero-middleware.svg)](https://greenkeeper.io/)
-[![CircleCI](https://circleci.com/gh/ryota-murakami/redux-boilerplate-less-archetype.svg?style=svg)](https://circleci.com/gh/ryota-murakami/redux-boilerplate-less-architecture)
+[![CircleCI](https://circleci.com/gh/ryota-murakami/redux-boilerplate-less-architecture.svg?style=svg)](https://circleci.com/gh/ryota-murakami/redux-boilerplate-less-architecture)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 [![tested with jest](https://img.shields.io/badge/tested_with-jest-99424f.svg)](https://github.com/facebook/jest)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
