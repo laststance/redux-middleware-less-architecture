@@ -8,14 +8,17 @@ exports[`github page fetch from API data shown when mounted 1`] = `
     class="sc-bwzfXH bDlgwH"
     data-testid="github-header"
   >
-    Github Page
+    GitHub Repo Search Example
   </h1>
   <div
-    class="sc-bxivhb ijDyjl"
+    class="sc-htpNat KtFsv"
+  />
+  <div
+    class="sc-ifAKCX SdvUM"
     data-testid="repo-list"
   >
     <div
-      class="sc-htpNat KtFsv"
+      class="sc-bxivhb bUZGRr"
     >
       <p>
         react
@@ -35,7 +38,7 @@ exports[`github page fetch from API data shown when mounted 1`] = `
       />
     </div>
     <div
-      class="sc-htpNat KtFsv"
+      class="sc-bxivhb bUZGRr"
     >
       <p>
         react
@@ -55,7 +58,7 @@ exports[`github page fetch from API data shown when mounted 1`] = `
       />
     </div>
     <div
-      class="sc-htpNat KtFsv"
+      class="sc-bxivhb bUZGRr"
     >
       <p>
         react
@@ -75,7 +78,7 @@ exports[`github page fetch from API data shown when mounted 1`] = `
       />
     </div>
     <div
-      class="sc-htpNat KtFsv"
+      class="sc-bxivhb bUZGRr"
     >
       <p>
         react
@@ -95,7 +98,7 @@ exports[`github page fetch from API data shown when mounted 1`] = `
       />
     </div>
     <div
-      class="sc-htpNat KtFsv"
+      class="sc-bxivhb bUZGRr"
     >
       <p>
         ReactiveCocoa
@@ -115,7 +118,7 @@ exports[`github page fetch from API data shown when mounted 1`] = `
       />
     </div>
     <div
-      class="sc-htpNat KtFsv"
+      class="sc-bxivhb bUZGRr"
     >
       <p>
         react
@@ -135,7 +138,7 @@ exports[`github page fetch from API data shown when mounted 1`] = `
       />
     </div>
     <div
-      class="sc-htpNat KtFsv"
+      class="sc-bxivhb bUZGRr"
     >
       <p>
         react-native
@@ -155,7 +158,7 @@ exports[`github page fetch from API data shown when mounted 1`] = `
       />
     </div>
     <div
-      class="sc-htpNat KtFsv"
+      class="sc-bxivhb bUZGRr"
     >
       <p>
         react-router
@@ -175,7 +178,7 @@ exports[`github page fetch from API data shown when mounted 1`] = `
       />
     </div>
     <div
-      class="sc-htpNat KtFsv"
+      class="sc-bxivhb bUZGRr"
     >
       <p>
         react
@@ -195,7 +198,7 @@ exports[`github page fetch from API data shown when mounted 1`] = `
       />
     </div>
     <div
-      class="sc-htpNat KtFsv"
+      class="sc-bxivhb bUZGRr"
     >
       <p>
         create-react-app
@@ -215,7 +218,7 @@ exports[`github page fetch from API data shown when mounted 1`] = `
       />
     </div>
     <div
-      class="sc-htpNat KtFsv"
+      class="sc-bxivhb bUZGRr"
     >
       <p>
         react
@@ -235,7 +238,7 @@ exports[`github page fetch from API data shown when mounted 1`] = `
       />
     </div>
     <div
-      class="sc-htpNat KtFsv"
+      class="sc-bxivhb bUZGRr"
     >
       <p>
         storybook
@@ -255,7 +258,7 @@ exports[`github page fetch from API data shown when mounted 1`] = `
       />
     </div>
     <div
-      class="sc-htpNat KtFsv"
+      class="sc-bxivhb bUZGRr"
     >
       <p>
         react-redux-starter-kit
@@ -275,7 +278,7 @@ exports[`github page fetch from API data shown when mounted 1`] = `
       />
     </div>
     <div
-      class="sc-htpNat KtFsv"
+      class="sc-bxivhb bUZGRr"
     >
       <p>
         react-demos
@@ -295,7 +298,7 @@ exports[`github page fetch from API data shown when mounted 1`] = `
       />
     </div>
     <div
-      class="sc-htpNat KtFsv"
+      class="sc-bxivhb bUZGRr"
     >
       <p>
         react
@@ -315,7 +318,7 @@ exports[`github page fetch from API data shown when mounted 1`] = `
       />
     </div>
     <div
-      class="sc-htpNat KtFsv"
+      class="sc-bxivhb bUZGRr"
     >
       <p>
         awesome-react
@@ -335,7 +338,7 @@ exports[`github page fetch from API data shown when mounted 1`] = `
       />
     </div>
     <div
-      class="sc-htpNat KtFsv"
+      class="sc-bxivhb bUZGRr"
     >
       <p>
         react-boilerplate
@@ -355,7 +358,7 @@ exports[`github page fetch from API data shown when mounted 1`] = `
       />
     </div>
     <div
-      class="sc-htpNat KtFsv"
+      class="sc-bxivhb bUZGRr"
     >
       <p>
         ReactiveUI
@@ -375,7 +378,7 @@ exports[`github page fetch from API data shown when mounted 1`] = `
       />
     </div>
     <div
-      class="sc-htpNat KtFsv"
+      class="sc-bxivhb bUZGRr"
     >
       <p>
         react
@@ -395,7 +398,7 @@ exports[`github page fetch from API data shown when mounted 1`] = `
       />
     </div>
     <div
-      class="sc-htpNat KtFsv"
+      class="sc-bxivhb bUZGRr"
     >
       <p>
         reactjs101
@@ -415,7 +418,7 @@ exports[`github page fetch from API data shown when mounted 1`] = `
       />
     </div>
     <div
-      class="sc-htpNat KtFsv"
+      class="sc-bxivhb bUZGRr"
     >
       <p>
         react-select
@@ -435,7 +438,7 @@ exports[`github page fetch from API data shown when mounted 1`] = `
       />
     </div>
     <div
-      class="sc-htpNat KtFsv"
+      class="sc-bxivhb bUZGRr"
     >
       <p>
         react-navigation
@@ -455,7 +458,7 @@ exports[`github page fetch from API data shown when mounted 1`] = `
       />
     </div>
     <div
-      class="sc-htpNat KtFsv"
+      class="sc-bxivhb bUZGRr"
     >
       <p>
         reaction
@@ -475,7 +478,7 @@ exports[`github page fetch from API data shown when mounted 1`] = `
       />
     </div>
     <div
-      class="sc-htpNat KtFsv"
+      class="sc-bxivhb bUZGRr"
     >
       <p>
         react-bootstrap
@@ -495,7 +498,7 @@ exports[`github page fetch from API data shown when mounted 1`] = `
       />
     </div>
     <div
-      class="sc-htpNat KtFsv"
+      class="sc-bxivhb bUZGRr"
     >
       <p>
         reactGo
@@ -515,7 +518,7 @@ exports[`github page fetch from API data shown when mounted 1`] = `
       />
     </div>
     <div
-      class="sc-htpNat KtFsv"
+      class="sc-bxivhb bUZGRr"
     >
       <p>
         react-redux
@@ -535,7 +538,7 @@ exports[`github page fetch from API data shown when mounted 1`] = `
       />
     </div>
     <div
-      class="sc-htpNat KtFsv"
+      class="sc-bxivhb bUZGRr"
     >
       <p>
         react-starter-kit
@@ -555,7 +558,7 @@ exports[`github page fetch from API data shown when mounted 1`] = `
       />
     </div>
     <div
-      class="sc-htpNat KtFsv"
+      class="sc-bxivhb bUZGRr"
     >
       <p>
         ReactNativeReduxCasts
@@ -575,7 +578,7 @@ exports[`github page fetch from API data shown when mounted 1`] = `
       />
     </div>
     <div
-      class="sc-htpNat KtFsv"
+      class="sc-bxivhb bUZGRr"
     >
       <p>
         React-For-Beginners-Starter-Files
@@ -595,7 +598,7 @@ exports[`github page fetch from API data shown when mounted 1`] = `
       />
     </div>
     <div
-      class="sc-htpNat KtFsv"
+      class="sc-bxivhb bUZGRr"
     >
       <p>
         React
