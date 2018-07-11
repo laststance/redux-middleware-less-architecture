@@ -38,7 +38,7 @@ describe('github page', () => {
 
     expect(store.getState().isLoading).toBe(true)
     expect(getByTestId('loading')).toBeInTheDOM()
-    expect(getByTestId('github-header')).toHaveTextContent('Github Page')
+    expect(getByTestId('github-header')).toHaveTextContent('GitHub Repo Search Example')
     expect(axios.get).toHaveBeenCalledTimes(1)
     expect(axios.get).toHaveBeenCalledWith(
       'https://api.github.com/search/repositories?q=react'
