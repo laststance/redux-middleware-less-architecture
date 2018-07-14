@@ -19,5 +19,3 @@ export type ReduxAction =
   | InitAction
   | StartLoadingAction
   | FetchRepositoryAction
-
-export type AsyncAction = FetchRepositoryAction
