@@ -10,7 +10,7 @@ const index = () => {
         <h1>Redux Boilerplate Less Architecture</h1>
       </Head>
       <Github to="/github">
-        GitHub Repo Search Example(still development🙏)
+        GitHub Repo Search Example(still development<span>🙏</span>)
       </Github>
     </Container>
   )
