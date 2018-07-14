@@ -17,11 +17,18 @@ this is code example of write React/Redux application from boilerplate less.
 This is [create-react-app](https://github.com/facebook/create-react-app) based, please refer [/src](https://github.com/ryota-murakami/redux-boilerplate-less-architecture/tree/master/src) folder.  
 
 ## Concept
-Redux fundamental is pretty 
+Redux fundamental is pretty simple.
+But actual Redux application codebase tend to bocome too complicated.
 
+**I guess that because doesn't match Redux fandamental(dispatch action -> resolve reducer -> update state) and actual codebase(excess middlewares, boilerplate, spliting file etc).**
 
+The problem is only influenced which way to how to scaling huge application, except for minimal understandable Redux usage.
+This repo suggestion to you straightforword Redux application coding style, without Middleware,Boilerpate,Advanced Liblary.
 
-
+**Requirements**
+- [react](https://github.com/facebook/react)
+- [redux](https://github.com/reduxjs/redux)
+- [react-redux](https://github.com/reduxjs/react-redux)
 
 ## Example
 [CodeSandbox available🎉](https://codesandbox.io/s/github/ryota-murakami/redux-boilerplate-less-architecture)
