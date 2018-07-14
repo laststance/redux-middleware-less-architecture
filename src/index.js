@@ -6,6 +6,7 @@ import { Provider } from 'redux-vanilla'
 import { BrowserRouter, Route } from 'react-router-dom'
 import IndexPage from './pages/index'
 import GithubPage from './pages/github'
+import './index.css'
 
 const store = createStore(
   reducer,
