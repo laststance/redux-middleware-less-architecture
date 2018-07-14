@@ -2,7 +2,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import { connect } from 'redux-vanilla'
-import { Loading } from '../../element'
+import { Loading } from '../../elements'
 import { Container, Header, Form } from './style'
 import List from './List'
 import type { ReduxState } from '../../reducer'
