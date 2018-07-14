@@ -7,7 +7,7 @@ const index = () => {
   return (
     <Container>
       <Head>
-        <h1>Redux Zero Middleware</h1>
+        <h1>Redux Boilerplate Less Architecture</h1>
       </Head>
       <Github to="/github">
         GitHub Repo Search Example(still development🙏)
