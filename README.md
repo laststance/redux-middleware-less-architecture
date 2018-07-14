@@ -30,6 +30,10 @@ This repo suggestion to you straightforword Redux application coding style, with
 - [redux](https://github.com/reduxjs/redux)
 - [react-redux](https://github.com/reduxjs/react-redux)
 
+### Specific Concepts
+- [Clarify entire state shape and initial state in reducer file](https://github.com/ryota-murakami/redux-boilerplate-less-architecture/blob/master/src/reducer.js#L6-L16)
+- [Handle async logic without middleware, keep Redux work only dispatch action -> resolve reducer -> update state](https://github.com/ryota-murakami/redux-boilerplate-less-architecture/blob/master/src/pages/github/index.js#L16-L33)
+
 ## Example
 [CodeSandbox available🎉](https://codesandbox.io/s/github/ryota-murakami/redux-boilerplate-less-architecture)
 
