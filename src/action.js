@@ -3,7 +3,7 @@ import type { RepositoryList } from './types/APIDataModel'
 
 export type InitAction = {
   type: '@@/App/INIT',
-  payload: mixed
+  payload?: any
 }
 
 export type StartLoadingAction = {
@@ -12,7 +12,7 @@ export type StartLoadingAction = {
 
 export type FetchRepositoryAction = {
   type: 'FETCH_REPOSITORY',
-  payload: { repositoryList: RepositoryList, isLoading: false }
+  payload: { repositoryList: RepositoryList }
 }
 
 export type ReduxAction =
