@@ -4,7 +4,13 @@ import 'jest-dom/extend-expect'
 import axios from 'axios'
 import { Github } from './index'
 import mockResponse from '../../testutil/mockResponse'
-import { store } from '../../store'
+import { createStore } from 'redux'
+import reducer from '../../reducer'
+
+const store = createStore(
+  reducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+)
 
 describe('github page', () => {
   it('fetch from API data shown when mounted', async () => {
