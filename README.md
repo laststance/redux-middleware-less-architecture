@@ -22,7 +22,8 @@ But actual Redux application codebase tend to bocome too complicated.
 
 **I guess that because doesn't match Redux fandamental(dispatch action -> resolve reducer -> update state) and actual codebase(excess middlewares, boilerplate, spliting file etc).**
 
-The problem is only influenced which way to how to scaling huge application, except for minimal understandable Redux usage.
+The problem is only influenced which way to how to scaling huge application, except for minimal understandable Redux usage.  
+
 This repo suggestion to you straightforword Redux application coding style, without Middleware,Boilerpate,Advanced Liblary.
 
 **Requirements**
