@@ -37,7 +37,7 @@ This repo suggestion to you straightforword Redux application coding style, with
 - [Clarify What kind of action are available? What kind of parameters should I give?](https://github.com/ryota-murakami/redux-boilerplate-less-architecture/blob/master/src/action.js#L4-L16)
 
 ## Example
-[CodeSandbox available🎉](https://codesandbox.io/s/github/ryota-murakami/redux-boilerplate-less-architecture)
+[CodeSandbox Available🎉](https://codesandbox.io/s/github/ryota-murakami/redux-boilerplate-less-architecture)
 
 
 ## Inspiration
