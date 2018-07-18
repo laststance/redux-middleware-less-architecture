@@ -6297,9 +6297,9 @@ react-spinners@^0.3.1:
     react-emotion "^9.1.1"
     recompose "0.26.0"
 
-react-testing-library@4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/react-testing-library/-/react-testing-library-4.0.0.tgz#b45b69f0996878e4afd19b4c3390be7b02516aa0"
+react-testing-library@4.1.2:
+  version "4.1.2"
+  resolved "https://registry.yarnpkg.com/react-testing-library/-/react-testing-library-4.1.2.tgz#20f9ea975c1f272b14f52bcc8e16e267382ea17f"
   dependencies:
     dom-testing-library "^2.6.0"
     wait-for-expect "^1.0.0"
