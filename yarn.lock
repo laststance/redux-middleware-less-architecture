@@ -4381,9 +4381,9 @@ jest-docblock@^21.0.0:
   version "21.2.0"
   resolved "https://registry.yarnpkg.com/jest-docblock/-/jest-docblock-21.2.0.tgz#51529c3b30d5fd159da60c27ceedc195faf8d414"
 
-jest-dom@^1.8.1:
-  version "1.8.1"
-  resolved "https://registry.yarnpkg.com/jest-dom/-/jest-dom-1.8.1.tgz#0838d36ff5b695ec23c853a68b9940abafb15095"
+jest-dom@^1.10.0:
+  version "1.10.0"
+  resolved "https://registry.yarnpkg.com/jest-dom/-/jest-dom-1.10.0.tgz#656b609ad8ee5106459fccb425f8081b13a3a49e"
   dependencies:
     chalk "^2.4.1"
     css "^2.2.3"
