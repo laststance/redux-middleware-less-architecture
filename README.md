@@ -28,7 +28,7 @@ The problem is only influenced which way to how to scaling huge application, exc
 This repo suggestion to you straightforword Redux application coding style, without Middleware,Boilerpate,Advanced Liblary.
 
 But remember, the suggestion only targeting small aplication.  
-**If your application will grow up to huge, I strongly reccomend read through [Idiomatic Redux by Mark Erikson](https://blog.isquaredsoftware.com/2017/05/idiomatic-redux-tao-of-redux-part-1/)**
+**If your application will grow up to huge, I strongly reccomend read through [Idiomatic Redux by Mark Erikson.](https://blog.isquaredsoftware.com/2017/05/idiomatic-redux-tao-of-redux-part-1/)**
 
 **Requirements**
 - [react](https://github.com/facebook/react)
