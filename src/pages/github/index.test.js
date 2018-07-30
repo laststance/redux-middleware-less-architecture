@@ -44,7 +44,7 @@ describe('github page', () => {
     const { getByTestId, container } = render(<DispatchEmitter />)
 
     expect(store.getState().isLoading).toBe(true)
-    expect(getByTestId('loading')).toBeInTheDOM()
+    expect(getByTestId('loading')).toBeInTheDocument()
     expect(getByTestId('github-header')).toHaveTextContent(
       'GitHub Repo Search Example'
     )
