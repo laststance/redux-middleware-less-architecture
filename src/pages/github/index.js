@@ -1,16 +1,20 @@
 // @flow
 import React, { Component } from 'react'
 import axios from 'axios'
-import { connect } from 'redux-vanilla'
+import { connect } from 'react-redux'
 import { Loading } from '../../elements'
 import { Container, Header, Form } from './style'
 import List from './List'
-import type { ReduxState } from '../../reducer'
 import type { Dispatch } from 'redux'
 import type { RepositoryList } from '../../types/APIDataModel'
 import type { ReduxAction } from '../../action'
+import type { ReduxState } from '../../reducer'
 
-type Props = {| state: ReduxState, dispatch: Dispatch<ReduxAction> |}
+type StateProps = {
+  isLoading: boolean,
+  repositoryList: RepositoryList
+}
+type Props = { ...StateProps, constructordispatch: Dispatch<ReduxAction> }
 
 export class Github extends Component<Props> {
   fetchRepository = async () => {
@@ -37,7 +41,7 @@ export class Github extends Component<Props> {
   }
 
   render() {
-    const { isLoading, repositoryList } = this.props.state
+    const { isLoading, repositoryList } = this.props
 
     return (
       <Container>
@@ -55,4 +59,11 @@ export class Github extends Component<Props> {
   }
 }
 
-export default connect(Github)
+const mapStateToProps = (state: ReduxState): StateProps => {
+  return {
+    isLoading: state.isLoading,
+    repositoryList: state.repositoryList
+  }
+}
+
+export default connect(mapStateToProps)(Github)

@@ -31,7 +31,11 @@ describe('github page', () => {
 
       render() {
         return (
-          <Github state={this.state.reduxState} dispatch={store.dispatch} />
+          <Github
+            isLoading={this.state.reduxState.isLoading}
+            repositoryList={this.state.reduxState.repositoryList}
+            dispatch={store.dispatch}
+          />
         )
       }
     }
