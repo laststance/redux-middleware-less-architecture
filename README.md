@@ -13,7 +13,7 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 ## What's this?
-this is code example of write React/Redux application from boilerplate less.  
+RBLA is the code example of write React/Redux application from boilerplate less.  
 This is [create-react-app](https://github.com/facebook/create-react-app) based, please refer [/src](https://github.com/ryota-murakami/redux-boilerplate-less-architecture/tree/master/src) folder.  
 
 ## Concept
