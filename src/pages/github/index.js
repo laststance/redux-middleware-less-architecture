@@ -14,7 +14,7 @@ type StateProps = {
   isLoading: boolean,
   repositoryList: RepositoryList
 }
-type Props = { ...StateProps, constructordispatch: Dispatch<ReduxAction> }
+type Props = { ...StateProps, dispatch: Dispatch<ReduxAction> }
 
 export class Github extends Component<Props> {
   fetchRepository = async () => {
