@@ -40,9 +40,20 @@ But remember, the suggestion only targeting small aplication.
 - [Handle async logic without middleware, keep Redux work only dispatch action -> resolve reducer -> update state](https://github.com/ryota-murakami/redux-boilerplate-less-architecture/blob/master/src/pages/github/index.js#L16-L33)
 - [Clarify What kind of action are available? What kind of parameters should I give?](https://github.com/ryota-murakami/redux-boilerplate-less-architecture/blob/master/src/action.js#L4-L16)
 
+<details>
+  <summary>Libraries not adopted</summary>
+  <div>
+    <h2>Too complicated for me when launch project.</h2>
+    <ul>
+      <li><a href="https://github.com/redux-saga/redux-saga" target="_blank">redux-saga</a>: Every things occuring in middleware. It's not Redux concern.</li>
+      <li><a href="https://github.com/paularmstrong/normalizr">normalizr</a>: I can't imagine nomalized data structure immediately.</li>
+      <li><a href="https://github.com/rt2zz/redux-persist">redux-persist</a>: Using LocalStoarage directly instead.</li>
+      </ul>
+  </div>
+</details>
+
 ## Example
 [CodeSandbox Available🎉](https://codesandbox.io/s/github/ryota-murakami/redux-boilerplate-less-architecture)
-
 
 ## Inspiration
 - [counter-vanilla](https://github.com/reactjs/redux/blob/master/examples/counter-vanilla/index.html)
