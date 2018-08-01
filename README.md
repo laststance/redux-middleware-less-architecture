@@ -40,6 +40,8 @@ But remember, the suggestion only targeting small aplication.
 - [Handle async logic without middleware, keep Redux work only dispatch action -> resolve reducer -> update state](https://github.com/ryota-murakami/redux-boilerplate-less-architecture/blob/master/src/pages/github/index.js#L16-L33)
 - [Clarify What kind of action are available? What kind of parameters should I give?](https://github.com/ryota-murakami/redux-boilerplate-less-architecture/blob/master/src/action.js#L4-L16)
 
+- [Dispatch action soon after bisiness logic never across function call scope flatly, and don't assign action string to const. In order to smooth debug used to Redux DevTools Extension. Copy action name, paste & search codebase immediately.](https://github.com/ryota-murakami/redux-boilerplate-less-architecture/blob/master/src/pages/github/index.js#L26-L37)
+
 <details>
   <summary>Libraries not adopted</summary>
   <div>
