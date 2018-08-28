@@ -7,6 +7,7 @@
     "downshift": "^2.1.5",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
+    "react-loadable": "^5.5.0",
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.2.2",
     "react-spinners": "^0.3.3",
@@ -14,16 +15,14 @@
     "styled-components": "^3.4.5"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-app-rewired start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "test:watch": "react-scripts test --watch --env=jsdom",
-    "test:cov": "react-scripts test --env=jsdom --collectCoverage",
     "eject": "react-scripts eject",
     "flow": "flow",
     "lint": "eslint src/**/*.js",
     "lint:fix": "eslint --fix src/**/*.js",
-    "codecov": "codecov -t $CODECOV_TOKEN",
     "contributors:add": "all-contributors add",
     "contributors:generate": "all-contributors generate"
   },
@@ -41,7 +40,6 @@
   "devDependencies": {
     "all-contributors-cli": "^5.4.0",
     "babel-eslint": "^8.2.6",
-    "codecov": "^3.0.4",
     "eslint": "^5.4.0",
     "eslint-config-react-app": "^2.1.0",
     "eslint-plugin-flowtype": "^2.50.0",
