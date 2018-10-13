@@ -4396,14 +4396,15 @@ jest-docblock@^20.0.3:
   version "20.0.3"
   resolved "https://registry.yarnpkg.com/jest-docblock/-/jest-docblock-20.0.3.tgz#17bea984342cc33d83c50fbe1545ea0efaa44712"
 
-jest-dom@^2.0.5:
-  version "2.0.5"
-  resolved "https://registry.yarnpkg.com/jest-dom/-/jest-dom-2.0.5.tgz#3a996a7a617ebc32eea86d70d133584f5b4613bd"
+jest-dom@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/jest-dom/-/jest-dom-2.1.0.tgz#ddd2c75d284ae0c9d17528cfd820727e964f8dd3"
   dependencies:
     chalk "^2.4.1"
     css "^2.2.3"
     jest-diff "^23.6.0"
     jest-matcher-utils "^23.6.0"
+    lodash "^4.17.11"
     pretty-format "^23.6.0"
     redent "^2.0.0"
 
@@ -4865,6 +4866,10 @@ lodash.uniq@^4.5.0:
 "lodash@>=3.5 <5", lodash@^4.11.2, lodash@^4.15.0, lodash@^4.17.10, lodash@^4.17.2, lodash@^4.17.3, lodash@^4.17.4, lodash@^4.17.5, lodash@^4.3.0:
   version "4.17.10"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.10.tgz#1b7793cf7259ea38fb3661d4d38b3260af8ae4e7"
+
+lodash@^4.17.11:
+  version "4.17.11"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.11.tgz#b39ea6229ef607ecd89e2c8df12536891cac9b8d"
 
 loglevel@^1.4.1:
   version "1.6.1"
