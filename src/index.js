@@ -1,7 +1,6 @@
-import React, { Fragment } from 'react'
+import React, { Suspense, Fragment, lazy } from 'react'
 import ReactDOM from 'react-dom'
 import styled from 'styled-components'
-import Loadable from 'react-loadable'
 import { CircleLoader } from 'react-spinners'
 import { createStore } from 'redux'
 import reducer from './reducer'
@@ -26,15 +25,9 @@ const Loading = () => {
 }
 
 /* prettier-ignore */
-const IndexPage = Loadable({
-  loader: () => import('./pages/index'/* webpackChunkName: "IndexPage" */),
-  loading: Loading
-})
+const IndexPage = lazy(() => import('./pages/index'/* webpackChunkName: "IndexPage" */))
 /* prettier-ignore */
-const GithubPage = Loadable({
-  loader: () => import('./pages/github'/* webpackChunkName: "GithubPage" */),
-  loading: Loading
-})
+const GithubPage = lazy(() => import('./pages/github'/* webpackChunkName: "GithubPage" */))
 
 const store = createStore(
   reducer,
@@ -44,10 +37,12 @@ const store = createStore(
 ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter>
-      <Fragment>
-        <Route exact path="/" component={IndexPage} />
-        <Route exact path="/github" component={GithubPage} />
-      </Fragment>
+      <Suspense fallback={<Loading />}>
+        <Fragment>
+          <Route exact path="/" component={IndexPage} />
+          <Route exact path="/github" component={GithubPage} />
+        </Fragment>
+      </Suspense>
     </BrowserRouter>
   </Provider>,
   document.getElementById('root')
