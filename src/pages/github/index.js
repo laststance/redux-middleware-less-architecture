@@ -66,4 +66,4 @@ const mapStateToProps = (state: ReduxState): StateProps => {
   }
 }
 
-export default connect(mapStateToProps)(Github)
+export default connect<_, _, *, _, *, _>(mapStateToProps)(Github)
