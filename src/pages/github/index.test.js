@@ -8,6 +8,24 @@ import { createStore } from 'redux'
 import reducer from '../../reducer'
 
 const store = createStore(reducer)
+class ReduxHOCMock extends Component {
+  state = { reduxState: store.getState() }
+
+  constructor(props) {
+    super(props)
+    store.subscribe(() => this.setState({ reduxState: store.getState() }))
+  }
+
+  render() {
+    return (
+      <Github
+        isLoading={this.state.reduxState.isLoading}
+        repositoryList={this.state.reduxState.repositoryList}
+        dispatch={store.dispatch}
+      />
+    )
+  }
+}
 
 describe('github page', () => {
   it('fetch from API data shown when mounted', async () => {
@@ -18,30 +36,11 @@ describe('github page', () => {
       })
     )
 
-    class DispatchEmitter extends Component {
-      state = { reduxState: store.getState() }
-
-      constructor(props) {
-        super(props)
-        store.subscribe(() => this.setState({ reduxState: store.getState() }))
-      }
-
-      render() {
-        return (
-          <Github
-            isLoading={this.state.reduxState.isLoading}
-            repositoryList={this.state.reduxState.repositoryList}
-            dispatch={store.dispatch}
-          />
-        )
-      }
-    }
-
     // before Mmout, it meant isLoading false
     expect(store.getState().isLoading).toBe(false)
 
     // mount, it meant isLoading true
-    const { getByTestId, container } = render(<DispatchEmitter />)
+    const { getByTestId, container } = render(<ReduxHOCMock />)
 
     expect(store.getState().isLoading).toBe(true)
     expect(getByTestId('loading')).toBeInTheDocument()
