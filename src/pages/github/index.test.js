@@ -7,6 +7,7 @@ import mockResponse from '../../testutil/mockResponse'
 import { createStore } from 'redux'
 import reducer from '../../reducer'
 
+// create redux
 const store = createStore(reducer)
 class ReduxHOCMock extends Component {
   state = { reduxState: store.getState() }
