@@ -37,7 +37,7 @@ describe('github page', () => {
       })
     )
 
-    // before Mmout, it meant isLoading false
+    // before Mouut, it meant isLoading false
     expect(store.getState().isLoading).toBe(false)
 
     // mount, it meant isLoading true
