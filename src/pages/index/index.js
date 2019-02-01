@@ -10,7 +10,7 @@ const index = () => {
         <h1>Redux Boilerplate Less Architecture</h1>
       </Head>
       <Github to="/github">
-        Async React-testing-library Demo
+        Async Github Data Fetch. and React-testing-library Demo
       </Github>
     </Container>
   )
