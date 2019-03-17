@@ -1,3 +1,7 @@
+# ⚠️OUTDATED
+The repo was created at before React's [Hooks](https://reactjs.org/docs/hooks-intro.html).
+So almost code were little bit older style and could be useless today.
+
 # Redux Boilerplate Less Architecture
 
 [![CircleCI](https://circleci.com/gh/ryota-murakami/redux-boilerplate-less-architecture.svg?style=svg)](https://circleci.com/gh/ryota-murakami/redux-boilerplate-less-architecture)
