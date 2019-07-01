@@ -1,5 +1,5 @@
 # ⚠️OUTDATED
-The repo was created at before React's [Hooks](https://reactjs.org/docs/hooks-intro.html).
+The repo was created at before React Redux [Hooks](https://react-redux.js.org/api/hooks).
 So almost code were little bit older style and could be useless today.
 
 # Redux Boilerplate Less Architecture
