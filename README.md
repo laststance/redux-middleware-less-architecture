@@ -2,22 +2,22 @@
 The repo was created at before React Redux [Hooks](https://react-redux.js.org/api/hooks).
 So almost code were little bit older style and could be useless today.
 
-# Redux Boilerplate Less Architecture
+# Redux Middleware Less Architecture
 
-[![CircleCI](https://circleci.com/gh/ryota-murakami/redux-boilerplate-less-architecture.svg?style=svg)](https://circleci.com/gh/ryota-murakami/redux-boilerplate-less-architecture)
+[![CircleCI](https://circleci.com/gh/ryota-murakami/redux-middleware-less-architecture.svg?style=svg)](https://circleci.com/gh/ryota-murakami/redux-middleware-less-architecture)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 [![tested with jest](https://img.shields.io/badge/tested_with-jest-99424f.svg)](https://github.com/facebook/jest)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
 
-> 🍷 write redux application from boilerplate less.
+> 🍷 write redux application from middleware less.
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 ## What's this?
-RBLA is the code example of write React/Redux application from boilerplate less.  
-This is [create-react-app](https://github.com/facebook/create-react-app) based, please refer [/src](https://github.com/ryota-murakami/redux-boilerplate-less-architecture/tree/master/src) folder.  
+RBLA is the code example of write React/Redux application from middleware less.
+This is [create-react-app](https://github.com/facebook/create-react-app) based, please refer [/src](https://github.com/ryota-murakami/redux-middleware-less-architecture/tree/master/src) folder.
 
 ## Concept
 Redux fundamental is pretty simple.  
@@ -40,7 +40,7 @@ But remember, the suggestion only targeting small aplication.
 
 ### Specific Concepts
 - [Clarify entire state shape and initial state in reducer file](https://github.com/ryota-murakami/redux-boilerplate-less-architecture/blob/master/src/reducer.js#L6-L16)
-- [Handle async logic without middleware, keep Redux work only dispatch action -> resolve reducer -> update state](https://github.com/ryota-murakami/redux-boilerplate-less-architecture/blob/master/src/pages/github/index.js#L16-L33)
+- [Handle async logic without middleware, keep Redux work only dispatch action -> resolve reducer -> update state](https://github.com/ryota-murakami/redux-middleware-less-architecture/blob/master/src/pages/github/index.js#L16-L33)
 - [Clarify What kind of action are available? What kind of parameters should I give?](https://github.com/ryota-murakami/redux-boilerplate-less-architecture/blob/master/src/action.js#L4-L16)
 
 - [Dispatch action soon after bisiness logic never across function call scope flatly, and don't assign action string to const. In order to smooth debug used to Redux DevTools Extension. Copy action name, paste & search codebase immediately.](https://github.com/ryota-murakami/redux-boilerplate-less-architecture/blob/master/src/pages/github/index.js#L26-L37)

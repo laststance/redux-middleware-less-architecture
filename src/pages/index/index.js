@@ -7,7 +7,7 @@ const index = () => {
   return (
     <Container>
       <Head>
-        <h1>Redux Boilerplate Less Architecture</h1>
+        <h1>Redux Middleware Less Architecture</h1>
       </Head>
       <Github to="/github">
         Async Github Data Fetch. and React-testing-library Demo
