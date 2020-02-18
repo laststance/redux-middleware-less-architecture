@@ -29,7 +29,7 @@ class DependencyInjectionCompoment extends Component {
 }
 
 describe('github page', () => {
-  it('fetch from API data shown when mounted', async () => {
+  it('Testing data fetch and display', async () => {
     // Mock axios.get() for disable real http request and set fake responce
     axios.get.mockImplementationOnce(() =>
       Promise.resolve({
@@ -40,7 +40,9 @@ describe('github page', () => {
     // Before mount, isLoading should be false
     expect(store.getState().isLoading).toBe(false)
 
-    const { getByTestId, container } = render(<DependencyInjectionCompoment />)
+    const { getByTestId, getByText, container } = render(
+      <DependencyInjectionCompoment />
+    )
 
     // After mount, isLoading should be true
     expect(store.getState().isLoading).toBe(true)
@@ -60,6 +62,13 @@ describe('github page', () => {
     expect(store.getState().isLoading).toBe(false)
     const list = getByTestId('repo-list')
     expect(list.children.length).toBe(30)
+    expect(getByText('react')).toBeTruthy()
+    expect(
+      getByText(
+        'A declarative, efficient, and flexible JavaScript library for building user interfaces.'
+      )
+    ).toBeTruthy()
+    expect(getByText('facebook')).toBeTruthy()
     expect(container.firstChild).toMatchSnapshot()
   })
 })
