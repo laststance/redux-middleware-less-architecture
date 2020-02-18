@@ -9,7 +9,7 @@ import reducer from '../../reducer'
 
 // create redux
 const store = createStore(reducer)
-class ReduxHOCMock extends Component {
+class DependencyInjectionCompoment extends Component {
   state = { reduxState: store.getState() }
 
   constructor(props) {
@@ -30,19 +30,19 @@ class ReduxHOCMock extends Component {
 
 describe('github page', () => {
   it('fetch from API data shown when mounted', async () => {
-    // mock API fetch on ComponentDidMount()
+    // Mock axios.get() for disable real http request and set fake responce
     axios.get.mockImplementationOnce(() =>
       Promise.resolve({
         data: mockResponse
       })
     )
 
-    // before Mouut, it meant isLoading false
+    // Before mount, isLoading should be false
     expect(store.getState().isLoading).toBe(false)
 
-    // mount, it meant isLoading true
-    const { getByTestId, container } = render(<ReduxHOCMock />)
+    const { getByTestId, container } = render(<DependencyInjectionCompoment />)
 
+    // After mount, isLoading should be true
     expect(store.getState().isLoading).toBe(true)
     expect(getByTestId('loading')).toBeInTheDocument()
     expect(getByTestId('github-header')).toHaveTextContent(
@@ -53,10 +53,10 @@ describe('github page', () => {
       'https://api.github.com/search/repositories?q=react'
     )
 
-    // dispatch fetch data to redux
+    // Simurate duration of api request
     await wait()
 
-    // after fetch data
+    // Testing what is showing browser, after completed all processes
     expect(store.getState().isLoading).toBe(false)
     const list = getByTestId('repo-list')
     expect(list.children.length).toBe(30)

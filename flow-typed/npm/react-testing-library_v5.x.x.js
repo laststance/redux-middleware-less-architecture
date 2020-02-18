@@ -1,5 +1,5 @@
-// flow-typed signature: 59eda4ec84d59ec5e2a7ba8354c5f45b
-// flow-typed version: ba34c6466e/react-testing-library_v5.x.x/flow_>=v0.67.1
+// flow-typed signature: 560a91adf3e9bee08800d87291253144
+// flow-typed version: c6154227d1/react-testing-library_v5.x.x/flow_>=v0.67.1 <=v0.103.x
 
 declare module 'react-testing-library' {
   declare type TextMatch =
@@ -13,59 +13,108 @@ declare module 'react-testing-library' {
     collapseWhitespace?: boolean,
   };
 
+  declare type SelectorMatchOptions = { selector?: string } & TextMatchOptions;
+
+  declare type GetByText = (
+    text: TextMatch,
+    options?: SelectorMatchOptions
+  ) => HTMLElement;
+
+  declare type QueryByText = (
+    text: TextMatch,
+    options?: SelectorMatchOptions
+  ) => ?HTMLElement;
+
+  declare type AllByText = (
+    text: TextMatch,
+    options?: SelectorMatchOptions
+  ) => Array<HTMLElement>;
+
+  declare type GetByBoundAttribute = (
+    text: TextMatch,
+    options?: TextMatchOptions
+  ) => HTMLElement;
+
+  declare type QueryByBoundAttribute = (
+    text: TextMatch,
+    options?: TextMatchOptions
+  ) => ?HTMLElement;
+
+  declare type AllByBoundAttribute = (
+    text: TextMatch,
+    options?: TextMatchOptions
+  ) => Array<HTMLElement>;
+
   declare type GetsAndQueries = {|
-    getByTestId: (id: TextMatch, options?: TextMatchOptions) => HTMLElement,
-    getByText: (
-      text: TextMatch,
-      options?: {selector?: string} & TextMatchOptions,
-    ) => HTMLElement,
-    getByPlaceholderText: (
-      text: TextMatch,
-      options?: TextMatchOptions,
-    ) => HTMLElement,
-    getByLabelText: (
-      text: TextMatch,
-      options?: {selector?: string} & TextMatchOptions,
-    ) => HTMLElement,
-    getByAltText: (text: TextMatch, options?: TextMatchOptions) => HTMLElement,
-    getAll: (text: TextMatch, options?: TextMatchOptions) => Array<HTMLElement>,
-    queryByTestId: (id: TextMatch, options?: TextMatchOptions) => ?HTMLElement,
-    queryByText: (text: TextMatch, options?: TextMatchOptions) => ?HTMLElement,
-    queryByPlaceholderText: (
-      text: TextMatch,
-      options?: TextMatchOptions,
-    ) => ?HTMLElement,
-    queryByLabelText: (
-      text: TextMatch,
-      options?: TextMatchOptions,
-    ) => ?HTMLElement,
-    queryByAltText: (
-      text: TextMatch,
-      options?: TextMatchOptions,
-    ) => ?HTMLElement,
-    queryAll: (
-      text: TextMatch,
-      options?: TextMatchOptions,
-    ) => Array<HTMLElement>,
+    getByAltText: GetByBoundAttribute,
+    getAllByAltText: AllByBoundAttribute,
+    queryByAltText: QueryByBoundAttribute,
+    queryAllByAltText: AllByBoundAttribute,
+
+    getByDisplayValue: GetByBoundAttribute,
+    getAllByDisplayValue: AllByBoundAttribute,
+    queryByDisplayValue: QueryByBoundAttribute,
+    queryAllByDisplayValue: AllByBoundAttribute,
+
+    getByLabelText: GetByText,
+    getAllByLabelText: AllByText,
+    queryByLabelText: QueryByText,
+    queryAllByLabelText: AllByText,
+
+    getByPlaceholderText: GetByBoundAttribute,
+    getAllByPlaceholderText: AllByBoundAttribute,
+    queryByPlaceholderText: QueryByBoundAttribute,
+    queryAllByPlaceholderText: AllByBoundAttribute,
+
+    getByRole: GetByBoundAttribute,
+    getAllByRole: AllByBoundAttribute,
+    queryByRole: QueryByBoundAttribute,
+    queryAllByRole: AllByBoundAttribute,
+
+    getBySelectText: GetByBoundAttribute,
+    getAllBySelectText: AllByBoundAttribute,
+    queryBySelectText: QueryByBoundAttribute,
+    queryAllBySelectText: AllByBoundAttribute,
+
+    getByTestId: GetByBoundAttribute,
+    getAllByTestId: AllByBoundAttribute,
+    queryByTestId: QueryByBoundAttribute,
+    queryAllByTestId: AllByBoundAttribute,
+
+    getByText: GetByText,
+    getAllByText: AllByText,
+    queryByText: QueryByText,
+    queryAllByText: AllByText,
+
+    getByTitle: GetByBoundAttribute,
+    getAllByTitle: AllByBoundAttribute,
+    queryByTitle: QueryByBoundAttribute,
+    queryAllByTitle: AllByBoundAttribute,
+
+    getByValue: GetByBoundAttribute,
+    getAllByValue: AllByBoundAttribute,
+    queryByValue: QueryByBoundAttribute,
+    queryAllByValue: AllByBoundAttribute,
   |};
 
   declare type RenderResult = {|
     container: HTMLDivElement,
     unmount: () => void,
     baseElement: HTMLElement,
+    asFragment: () => DocumentFragment,
     debug: (baseElement?: HTMLElement) => void,
     rerender: (ui: React$Element<*>) => void,
   |} & GetsAndQueries;
 
   declare type FireEvent<TInit> = (
     element: HTMLElement,
-    eventProperties?: TInit,
+    eventProperties?: TInit
   ) => boolean;
 
   declare module.exports: {
     render: (
       ui: React$Element<*>,
-      options?: {container: HTMLElement, baseElement?: HTMLElement},
+      options?: { container: HTMLElement, baseElement?: HTMLElement }
     ) => RenderResult,
 
     cleanup: () => void,
@@ -75,8 +124,14 @@ declare module 'react-testing-library' {
       options?: {
         timeout?: number,
         interval?: number,
-      },
+      }
     ) => Promise<void>,
+
+    waitForDomChange: <T>(options?: {
+      container?: HTMLElement,
+      timeout?: number,
+      mutationObserverOptions?: MutationObserverInit,
+    }) => Promise<T>,
 
     waitForElement: <T>(
       callback?: () => T,
@@ -84,12 +139,12 @@ declare module 'react-testing-library' {
         container?: HTMLElement,
         timeout?: number,
         mutationObserverOptions?: MutationObserverInit,
-      },
-    ) => Promise<T | void>,
+      }
+    ) => Promise<T>,
 
     within: (
       element: HTMLElement,
-      queriesToBind?: GetsAndQueries | Array<GetsAndQueries>,
+      queriesToBind?: GetsAndQueries | Array<GetsAndQueries>
     ) => GetsAndQueries,
 
     fireEvent: {|
@@ -170,52 +225,52 @@ declare module 'react-testing-library' {
     queryByTestId: (
       container: HTMLElement,
       id: TextMatch,
-      options?: TextMatchOptions,
+      options?: TextMatchOptions
     ) => ?HTMLElement,
     getByTestId: (
       container: HTMLElement,
       id: TextMatch,
-      options?: TextMatchOptions,
+      options?: TextMatchOptions
     ) => HTMLElement,
     queryByText: (
       container: HTMLElement,
       text: TextMatch,
-      options?: TextMatchOptions,
+      options?: TextMatchOptions
     ) => ?HTMLElement,
     getByText: (
       container: HTMLElement,
       text: TextMatch,
-      options?: {selector?: string} & TextMatchOptions,
+      options?: { selector?: string } & TextMatchOptions
     ) => HTMLElement,
     queryByPlaceholderText: (
       container: HTMLElement,
       text: TextMatch,
-      options?: TextMatchOptions,
+      options?: TextMatchOptions
     ) => ?HTMLElement,
     getByPlaceholderText: (
       container: HTMLElement,
       text: TextMatch,
-      options?: TextMatchOptions,
+      options?: TextMatchOptions
     ) => HTMLElement,
     queryByLabelText: (
       container: HTMLElement,
       text: TextMatch,
-      options?: TextMatchOptions,
+      options?: TextMatchOptions
     ) => ?HTMLElement,
     getByLabelText: (
       container: HTMLElement,
       text: TextMatch,
-      options?: {selector?: string} & TextMatchOptions,
+      options?: { selector?: string } & TextMatchOptions
     ) => HTMLElement,
     queryByAltText: (
       container: HTMLElement,
       text: TextMatch,
-      options?: TextMatchOptions,
+      options?: TextMatchOptions
     ) => ?HTMLElement,
     getByAltText: (
       container: HTMLElement,
       text: TextMatch,
-      options?: TextMatchOptions,
+      options?: TextMatchOptions
     ) => HTMLElement,
   };
 }
