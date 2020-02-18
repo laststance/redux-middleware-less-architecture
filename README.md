@@ -1,4 +1,4 @@
-# ⚠️OUTDATED
+# ⚠️ OUTDATED
 The repo was created at before React Redux [Hooks](https://react-redux.js.org/api/hooks).
 So almost code were little bit older style and could be useless today.
 
@@ -58,7 +58,7 @@ But remember, the suggestion only targeting small aplication.
 </details>
 
 ## Example
-[CodeSandbox Available🎉](https://codesandbox.io/s/github/ryota-murakami/redux-boilerplate-less-architecture)
+[CodeSandbox Available 🎉](https://codesandbox.io/s/github/ryota-murakami/redux-boilerplate-less-architecture)
 
 ## Inspiration
 - [counter-vanilla](https://github.com/reactjs/redux/blob/master/examples/counter-vanilla/index.html)
