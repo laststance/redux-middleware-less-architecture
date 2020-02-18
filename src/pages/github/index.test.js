@@ -14,7 +14,11 @@ class DependencyInjectionCompoment extends Component {
 
   constructor(props) {
     super(props)
-    store.subscribe(() => this.setState({ reduxState: store.getState() }))
+    store.subscribe(() =>
+      this.setState(() => {
+        return { reduxState: store.getState() }
+      })
+    )
   }
 
   render() {

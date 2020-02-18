@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`github page fetch from API data shown when mounted 1`] = `
+exports[`github page Testing data fetch and display 1`] = `
 <div
   class="sc-bdVaJa fKEnoH"
 >
