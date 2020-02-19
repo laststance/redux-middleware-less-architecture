@@ -9,7 +9,7 @@ import reducer from '../../reducer'
 
 // create redux
 const store = createStore(reducer)
-class DependencyInjectionCompoment extends Component {
+class DIConmponent extends Component {
   state = { reduxState: store.getState() }
 
   constructor(props) {
@@ -44,28 +44,34 @@ describe('github page', () => {
     // Before mount, isLoading should be false
     expect(store.getState().isLoading).toBe(false)
 
-    const { getByTestId, getByText, container } = render(
-      <DependencyInjectionCompoment />
-    )
-
-    // After mount, isLoading should be true
-    expect(store.getState().isLoading).toBe(true)
-    expect(getByTestId('loading')).toBeInTheDocument()
+    // render compoment
+    const { getByTestId, getByText, container } = render(<DIConmponent />)
+    // check web page header title
     expect(getByTestId('github-header')).toHaveTextContent(
       'GitHub Repo Search Example'
     )
+
+    // running get request to 'https://api.github.com/search/repositories?q=react'
+    // After mount, isLoading should be true
+    expect(store.getState().isLoading).toBe(true)
+    expect(getByTestId('loading')).toBeInTheDocument()
+
     expect(axios.get).toHaveBeenCalledTimes(1)
     expect(axios.get).toHaveBeenCalledWith(
       'https://api.github.com/search/repositories?q=react'
     )
 
-    // Simurate duration of api request
+    // Simurate duration of API request
     await wait()
 
-    // Testing what is showing browser, after completed all processes
+    // Should be turn off when resolve API request
     expect(store.getState().isLoading).toBe(false)
+
+    // Original code is requesting 30 items to API
     const list = getByTestId('repo-list')
     expect(list.children.length).toBe(30)
+
+    // Shold be displaying facebook/react repo as a search result
     expect(getByText('react')).toBeTruthy()
     expect(
       getByText(
@@ -73,6 +79,8 @@ describe('github page', () => {
       )
     ).toBeTruthy()
     expect(getByText('facebook')).toBeTruthy()
+
+    // Entire web page snapshot
     expect(container.firstChild).toMatchSnapshot()
   })
 })
